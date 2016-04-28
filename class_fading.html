@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -67,6 +74,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_fading.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,7 +103,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,67 +123,32 @@ Inheritance diagram for Fading:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aad79c9805adb309dfca9c35956a6539f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fading.html#aad79c9805adb309dfca9c35956a6539f">BeginFade</a> (int direction)</td></tr>
+<tr class="memitem:aad79c9805adb309dfca9c35956a6539f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad79c9805adb309dfca9c35956a6539f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>BeginFade</b> (int direction)</td></tr>
 <tr class="separator:aad79c9805adb309dfca9c35956a6539f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aaba5de61bbf5cd88b53a8d2b81f074a1"><td class="memItemLeft" align="right" valign="top">Texture2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fading.html#aaba5de61bbf5cd88b53a8d2b81f074a1">fadeOutTexture</a></td></tr>
+<tr class="memitem:aaba5de61bbf5cd88b53a8d2b81f074a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaba5de61bbf5cd88b53a8d2b81f074a1"></a>
+Texture2D&#160;</td><td class="memItemRight" valign="bottom"><b>fadeOutTexture</b></td></tr>
 <tr class="separator:aaba5de61bbf5cd88b53a8d2b81f074a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4850e50beaca24d0a3266221a36f1e5a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fading.html#a4850e50beaca24d0a3266221a36f1e5a">fadeSpeed</a> = 0.0f</td></tr>
+<tr class="memitem:a4850e50beaca24d0a3266221a36f1e5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4850e50beaca24d0a3266221a36f1e5a"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>fadeSpeed</b> = 0.0f</td></tr>
 <tr class="separator:a4850e50beaca24d0a3266221a36f1e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aad79c9805adb309dfca9c35956a6539f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Fading.BeginFade </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>direction</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aaba5de61bbf5cd88b53a8d2b81f074a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Texture2D Fading.fadeOutTexture</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4850e50beaca24d0a3266221a36f1e5a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Fading.fadeSpeed = 0.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/Custom/<a class="el" href="_fading_8cs.html">Fading.cs</a></li>
+<li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/Fading.cs</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_fading.html">Fading</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Packages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -62,9 +69,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="namespaces.html"><span>Packages</span></a></li>
-      <li><a href="namespacemembers.html"><span>Package&#160;Functions</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespace_tower_v_r.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,7 +100,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -91,6 +111,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_game_state.html">GameState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_game_state_changed_event.html">GameStateChangedEvent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_tower_v_r_1_1_i_tower_game_manager.html">ITowerGameManager</a></td></tr>
@@ -131,6 +153,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_try_start_game_event.html">TryStartGameEvent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_turn_state.html">TurnState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_turn_state_changed_event.html">TurnStateChangedEvent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_turn_time_limits.html">TurnTimeLimits</a></td></tr>
@@ -138,137 +162,22 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a93e54d282814c68b3e427251cd968c5b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5b">GameState</a> { <br />
-&#160;&#160;<a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5ba6adf97f83acf6453d4a6a4b1070f3754">GameState.None</a> = 0, 
-<a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5bad276e91874166c4ff2a0e8dc35a5b07a">GameState.AwaitingPlayers</a> = 1, 
-<a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5babec8c9ec08b3e7aa98f067a60ed08210">GameState.AllPlayersReady</a> = 2, 
-<a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5bae64465da4a42d65847b321045b155602">GameState.Countdown</a> = 3, 
-<br />
-&#160;&#160;<a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5ba5bda814c4aedb126839228f1a3d92f09">GameState.Running</a> = 4, 
-<a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5ba0157fbb99be9622bdaa6e544270c0622">GameState.Ended</a> = 5, 
-<a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5bac23e2b09ebe6bf4cb5e2a9abe85c0be2">GameState.Stopped</a> = 6
-<br />
- }</td></tr>
-<tr class="separator:a93e54d282814c68b3e427251cd968c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a12e2b0065a244f506bddb485582f4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tower_v_r.html#a87a12e2b0065a244f506bddb485582f4">TurnState</a> { <br />
-&#160;&#160;<a class="el" href="namespace_tower_v_r.html#a87a12e2b0065a244f506bddb485582f4a6adf97f83acf6453d4a6a4b1070f3754">TurnState.None</a> = 0, 
-<a class="el" href="namespace_tower_v_r.html#a87a12e2b0065a244f506bddb485582f4afa7be7845bc42b3491d9d0377958be94">TurnState.NotStarted</a> = 1, 
-<a class="el" href="namespace_tower_v_r.html#a87a12e2b0065a244f506bddb485582f4af9f7244c2e7dc6c363e5e29cbbd57bc6">TurnState.SelectingTowerPiece</a> = 2, 
-<a class="el" href="namespace_tower_v_r.html#a87a12e2b0065a244f506bddb485582f4a56d0d56a430b94dff30a0856710d874d">TurnState.PlacingTowerPiece</a> = 3, 
-<br />
-&#160;&#160;<a class="el" href="namespace_tower_v_r.html#a87a12e2b0065a244f506bddb485582f4aa6d5d092d43e75a02793291794d4e4fc">TurnState.TowerReacting</a> = 4
-<br />
- }</td></tr>
-<tr class="separator:a87a12e2b0065a244f506bddb485582f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84917c8a9c1c65b2e7428f40c090f273"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273">TowerPieceDifficulty</a> { <a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273a7f943921724d63dc0ac9c6febf99fa88">TowerPieceDifficulty.Easy</a>, 
-<a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273a87f8a6ab85c9ced3702b4ea641ad4bb5">TowerPieceDifficulty.Medium</a>, 
-<a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273a3656183169810334a96b91129dc9d881">TowerPieceDifficulty.Hard</a>
+<tr class="memitem:a84917c8a9c1c65b2e7428f40c090f273"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84917c8a9c1c65b2e7428f40c090f273"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TowerPieceDifficulty</b> { <b>Easy</b>, 
+<b>Medium</b>, 
+<b>Hard</b>
  }</td></tr>
 <tr class="separator:a84917c8a9c1c65b2e7428f40c090f273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a93e54d282814c68b3e427251cd968c5b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespace_tower_v_r.html#a93e54d282814c68b3e427251cd968c5b">TowerVR.GameState</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a93e54d282814c68b3e427251cd968c5ba6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a93e54d282814c68b3e427251cd968c5bad276e91874166c4ff2a0e8dc35a5b07a"></a>AwaitingPlayers&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a93e54d282814c68b3e427251cd968c5babec8c9ec08b3e7aa98f067a60ed08210"></a>AllPlayersReady&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a93e54d282814c68b3e427251cd968c5bae64465da4a42d65847b321045b155602"></a>Countdown&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a93e54d282814c68b3e427251cd968c5ba5bda814c4aedb126839228f1a3d92f09"></a>Running&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a93e54d282814c68b3e427251cd968c5ba0157fbb99be9622bdaa6e544270c0622"></a>Ended&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a93e54d282814c68b3e427251cd968c5bac23e2b09ebe6bf4cb5e2a9abe85c0be2"></a>Stopped&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="a84917c8a9c1c65b2e7428f40c090f273"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273">TowerVR.TowerPieceDifficulty</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a84917c8a9c1c65b2e7428f40c090f273a7f943921724d63dc0ac9c6febf99fa88"></a>Easy&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a84917c8a9c1c65b2e7428f40c090f273a87f8a6ab85c9ced3702b4ea641ad4bb5"></a>Medium&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a84917c8a9c1c65b2e7428f40c090f273a3656183169810334a96b91129dc9d881"></a>Hard&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="a87a12e2b0065a244f506bddb485582f4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="namespace_tower_v_r.html#a87a12e2b0065a244f506bddb485582f4">TowerVR.TurnState</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a87a12e2b0065a244f506bddb485582f4a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a87a12e2b0065a244f506bddb485582f4afa7be7845bc42b3491d9d0377958be94"></a>NotStarted&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a87a12e2b0065a244f506bddb485582f4af9f7244c2e7dc6c363e5e29cbbd57bc6"></a>SelectingTowerPiece&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a87a12e2b0065a244f506bddb485582f4a56d0d56a430b94dff30a0856710d874d"></a>PlacingTowerPiece&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a87a12e2b0065a244f506bddb485582f4aa6d5d092d43e75a02793291794d4e4fc"></a>TowerReacting&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-</div>
-</div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tower_v_r.html">TowerVR</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

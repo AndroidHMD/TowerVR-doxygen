@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -67,6 +74,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_torus.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,7 +103,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,94 +123,38 @@ Inheritance diagram for Torus:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a11488676c74af823a124085c3af72aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torus.html#a11488676c74af823a124085c3af72aa3">RefreshTorus</a> ()</td></tr>
+<tr class="memitem:a11488676c74af823a124085c3af72aa3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11488676c74af823a124085c3af72aa3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RefreshTorus</b> ()</td></tr>
 <tr class="separator:a11488676c74af823a124085c3af72aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8dd1e53cd1fb9415fbe64b7004ba274c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torus.html#a8dd1e53cd1fb9415fbe64b7004ba274c">segmentRadius</a> = 1f</td></tr>
+<tr class="memitem:a8dd1e53cd1fb9415fbe64b7004ba274c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dd1e53cd1fb9415fbe64b7004ba274c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>segmentRadius</b> = 1f</td></tr>
 <tr class="separator:a8dd1e53cd1fb9415fbe64b7004ba274c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af176474a9c7b704f10c2fd58b33771f8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torus.html#af176474a9c7b704f10c2fd58b33771f8">tubeRadius</a> = 0.1f</td></tr>
+<tr class="memitem:af176474a9c7b704f10c2fd58b33771f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af176474a9c7b704f10c2fd58b33771f8"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>tubeRadius</b> = 0.1f</td></tr>
 <tr class="separator:af176474a9c7b704f10c2fd58b33771f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c0c35544de72aa99edaa76d5b7357d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torus.html#a5c0c35544de72aa99edaa76d5b7357d8">numSegments</a> = 32</td></tr>
+<tr class="memitem:a5c0c35544de72aa99edaa76d5b7357d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c0c35544de72aa99edaa76d5b7357d8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>numSegments</b> = 32</td></tr>
 <tr class="separator:a5c0c35544de72aa99edaa76d5b7357d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f981e7fbdfedb7170aba45013673dff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torus.html#a7f981e7fbdfedb7170aba45013673dff">numTubes</a> = 12</td></tr>
+<tr class="memitem:a7f981e7fbdfedb7170aba45013673dff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f981e7fbdfedb7170aba45013673dff"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>numTubes</b> = 12</td></tr>
 <tr class="separator:a7f981e7fbdfedb7170aba45013673dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a11488676c74af823a124085c3af72aa3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Torus.RefreshTorus </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a5c0c35544de72aa99edaa76d5b7357d8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Torus.numSegments = 32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7f981e7fbdfedb7170aba45013673dff"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Torus.numTubes = 12</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8dd1e53cd1fb9415fbe64b7004ba274c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Torus.segmentRadius = 1f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af176474a9c7b704f10c2fd58b33771f8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Torus.tubeRadius = 0.1f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/Custom/<a class="el" href="_torus_8cs.html">Torus.cs</a></li>
+<li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/Torus.cs</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_torus.html">Torus</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

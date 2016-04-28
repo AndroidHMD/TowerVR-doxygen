@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -68,6 +75,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('annotated.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -90,28 +111,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><a class="el" href="namespace_tower_v_r.html" target="_self">TowerVR</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_game_state_changed_event.html" target="_self">GameStateChangedEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="interface_tower_v_r_1_1_i_tower_game_manager.html" target="_self">ITowerGameManager</a></td><td class="desc"></td></tr>
-<tr id="row_0_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html" target="_self">MasterTowerGameManagerImpl</a></td><td class="desc"></td></tr>
-<tr id="row_0_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_network_event_codes.html" target="_self">NetworkEventCodes</a></td><td class="desc"></td></tr>
-<tr id="row_0_4_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_next_player_event.html" target="_self">NextPlayerEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_place_tower_piece_event.html" target="_self">PlaceTowerPieceEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_6_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_lost_event.html" target="_self">PlayerLostEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_ready_event.html" target="_self">PlayerReadyEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_8_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_turn_observer.html" target="_self">PlayerTurnObserver</a></td><td class="desc"></td></tr>
-<tr id="row_0_9_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_won_event.html" target="_self">PlayerWonEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_10_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_tower_v_r_1_1_score.html" target="_self">Score</a></td><td class="desc"></td></tr>
-<tr id="row_0_11_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_score_changed_event.html" target="_self">ScoreChangedEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_12_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_select_tower_piece_event.html" target="_self">SelectTowerPieceEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_13_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_game_behaviour.html" target="_self">TowerGameBehaviour</a></td><td class="desc"></td></tr>
-<tr id="row_0_14_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_game_manager.html" target="_self">TowerGameManager</a></td><td class="desc"></td></tr>
-<tr id="row_0_15_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html" target="_self">TowerGameManagerImpl</a></td><td class="desc"></td></tr>
-<tr id="row_0_16_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_piece.html" target="_self">TowerPiece</a></td><td class="desc"></td></tr>
-<tr id="row_0_17_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_piece_info.html" target="_self">TowerPieceInfo</a></td><td class="desc"></td></tr>
-<tr id="row_0_18_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html" target="_self">TowerPieceSpawner</a></td><td class="desc"></td></tr>
-<tr id="row_0_19_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_try_start_game_event.html" target="_self">TryStartGameEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_20_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_turn_state_changed_event.html" target="_self">TurnStateChangedEvent</a></td><td class="desc"></td></tr>
-<tr id="row_0_21_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_turn_time_limits.html" target="_self">TurnTimeLimits</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_game_state.html" target="_self">GameState</a></td><td class="desc"></td></tr>
+<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_game_state_changed_event.html" target="_self">GameStateChangedEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="interface_tower_v_r_1_1_i_tower_game_manager.html" target="_self">ITowerGameManager</a></td><td class="desc"></td></tr>
+<tr id="row_0_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html" target="_self">MasterTowerGameManagerImpl</a></td><td class="desc"></td></tr>
+<tr id="row_0_4_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_network_event_codes.html" target="_self">NetworkEventCodes</a></td><td class="desc"></td></tr>
+<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_next_player_event.html" target="_self">NextPlayerEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_6_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_place_tower_piece_event.html" target="_self">PlaceTowerPieceEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_lost_event.html" target="_self">PlayerLostEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_8_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_ready_event.html" target="_self">PlayerReadyEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_9_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_turn_observer.html" target="_self">PlayerTurnObserver</a></td><td class="desc"></td></tr>
+<tr id="row_0_10_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_player_won_event.html" target="_self">PlayerWonEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_11_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_tower_v_r_1_1_score.html" target="_self">Score</a></td><td class="desc"></td></tr>
+<tr id="row_0_12_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_score_changed_event.html" target="_self">ScoreChangedEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_13_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_select_tower_piece_event.html" target="_self">SelectTowerPieceEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_14_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_game_behaviour.html" target="_self">TowerGameBehaviour</a></td><td class="desc"></td></tr>
+<tr id="row_0_15_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_game_manager.html" target="_self">TowerGameManager</a></td><td class="desc"></td></tr>
+<tr id="row_0_16_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html" target="_self">TowerGameManagerImpl</a></td><td class="desc"></td></tr>
+<tr id="row_0_17_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_piece.html" target="_self">TowerPiece</a></td><td class="desc"></td></tr>
+<tr id="row_0_18_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_piece_info.html" target="_self">TowerPieceInfo</a></td><td class="desc"></td></tr>
+<tr id="row_0_19_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html" target="_self">TowerPieceSpawner</a></td><td class="desc"></td></tr>
+<tr id="row_0_20_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_try_start_game_event.html" target="_self">TryStartGameEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_21_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_turn_state.html" target="_self">TurnState</a></td><td class="desc"></td></tr>
+<tr id="row_0_22_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_turn_state_changed_event.html" target="_self">TurnStateChangedEvent</a></td><td class="desc"></td></tr>
+<tr id="row_0_23_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_tower_v_r_1_1_turn_time_limits.html" target="_self">TurnTimeLimits</a></td><td class="desc"></td></tr>
 <tr id="row_1_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><a class="el" href="namespace_vuforia.html" target="_self">Vuforia</a></td><td class="desc"></td></tr>
 <tr id="row_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_vuforia_1_1_lost_tracking.html" target="_self">LostTracking</a></td><td class="desc"></td></tr>
 <tr id="row_2_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_connect_and_create_tower_manager.html" target="_self">ConnectAndCreateTowerManager</a></td><td class="desc"></td></tr>
@@ -133,11 +156,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

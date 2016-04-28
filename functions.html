@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,33 +78,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
-      <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_prop.html"><span>Properties</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
       <li><a href="#index_a"><span>a</span></a></li>
-      <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
-      <li><a href="#index_d"><span>d</span></a></li>
-      <li><a href="#index_e"><span>e</span></a></li>
-      <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
-      <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
-      <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
-      <li><a href="#index_t"><span>t</span></a></li>
-      <li class="current"><a href="#index_u"><span>u</span></a></li>
+      <li class="current"><a href="#index_t"><span>t</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -113,33 +126,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
+<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>Add()
 : <a class="el" href="struct_tower_v_r_1_1_score.html#aac623a0d5853cf71f1599cdc7dd2f963">TowerVR.Score</a>
 </li>
-<li>Awake()
-: <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a920da97216b0b70d5cc3c9d9a6ef0009">TowerVR.MasterTowerGameManagerImpl</a>
-, <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a3351d08f215064960524516af7e39055">TowerVR.TowerGameManagerImpl</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
-<li>BeginFade()
-: <a class="el" href="class_fading.html#aad79c9805adb309dfca9c35956a6539f">Fading</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
-<li>color
-: <a class="el" href="class_torus_generator.html#aa8bebfe24d304aa83881e1e676d3fa35">TorusGenerator</a>
-</li>
-<li>content
-: <a class="el" href="class_photon_network_event.html#af40128239b2f9a8fb905f125ddbf5e96">PhotonNetworkEvent</a>
-</li>
 <li>contentIsValid()
 : <a class="el" href="class_photon_network_event.html#a82a5487738983085c9e8ac4116474b43">PhotonNetworkEvent</a>
 , <a class="el" href="class_tower_v_r_1_1_select_tower_piece_event.html#addf1cb68acf541e199df157a32ab25ca">TowerVR.SelectTowerPieceEvent</a>
@@ -147,127 +143,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Create()
 : <a class="el" href="class_tower_v_r_1_1_tower_piece.html#a686d6c1c40c7a45e6b3bb9f31b79b12d">TowerVR.TowerPiece</a>
 </li>
-<li>cubePrefab
-: <a class="el" href="class_show_servers.html#ab9d074dfd7020e70dade8682a7ac69bf">ShowServers</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
-<li>debugPosition
-: <a class="el" href="class_transform_debugger.html#ad1f6c8c9bcb39453ce66aaa3d3568421">TransformDebugger</a>
-</li>
-<li>debugRotation
-: <a class="el" href="class_transform_debugger.html#ad32a74a860e5d8dbfcf5e25e968115f9">TransformDebugger</a>
-</li>
-<li>debugScale
-: <a class="el" href="class_transform_debugger.html#a1a2e3f97f561dcb247d6eddaae0fc585">TransformDebugger</a>
-</li>
-<li>difficulty
-: <a class="el" href="class_tower_v_r_1_1_tower_piece.html#a80a1261ef724785a25d02a36cf26f7a1">TowerVR.TowerPiece</a>
-, <a class="el" href="class_tower_v_r_1_1_tower_piece_info.html#a0c14a859f276fa25a4c179b1760285bd">TowerVR.TowerPieceInfo</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
-<li>eventCode
-: <a class="el" href="class_photon_network_event.html#a93db8417c2b97d96ac6541ad2eda3743">PhotonNetworkEvent</a>
-</li>
-<li>eventOptions
-: <a class="el" href="class_photon_network_event.html#a03103d069e24a349bf4fc74a493bbeda">PhotonNetworkEvent</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
-<li>fadeOutTexture
-: <a class="el" href="class_fading.html#aaba5de61bbf5cd88b53a8d2b81f074a1">Fading</a>
-</li>
-<li>fadeSpeed
-: <a class="el" href="class_fading.html#a4850e50beaca24d0a3266221a36f1e5a">Fading</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>GameStateChanged
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#a9267541fd8c3adc2be663318feee511f">TowerVR.NetworkEventCodes</a>
-</li>
-<li>GameStateChangedEvent()
-: <a class="el" href="class_tower_v_r_1_1_game_state_changed_event.html#a28a0275de134c18fed66ba0ba3c9e685">TowerVR.GameStateChangedEvent</a>
-</li>
 <li>GameStateChangedHandler()
 : <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a4bfd43a7fbaab6c26aa918ff220f11f8">TowerVR.TowerGameManager</a>
 </li>
-<li>gameStateChangedHandlers
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#ab98615edfe6e6cc3f8a021104ad83c30">TowerVR.TowerGameManager</a>
-</li>
 <li>GetScore()
 : <a class="el" href="struct_tower_v_r_1_1_score.html#af6094076da2c9cbdab969bf879e4dfcd">TowerVR.Score</a>
-</li>
-<li>GetUniquePhotonViewID()
-: <a class="el" href="class_networked_behaviour.html#a59d7978c054fa5226c43a82566d35877">NetworkedBehaviour</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
-<li>handleGameStateChangedEvent()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a1e230366e77ebf760fa5a5aacb696585">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>handleNextPlayerEvent()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a94c2a0d3022dd3e23095280cc5c10de4">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>handlePlaceTowerPieceEvent()
-: <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#ac6f458a4a2437d060b6940cf01603ebf">TowerVR.MasterTowerGameManagerImpl</a>
-</li>
-<li>handlePlayerLostEvent()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a2229c85a77dd3e8487d9d127d6a084c4">TowerVR.TowerGameManagerImpl</a>
-</li>
 <li>handlePlayerReadyEvent()
 : <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a308a6d258b02fd2c9ee1f9e8d0445dd4">TowerVR.MasterTowerGameManagerImpl</a>
-</li>
-<li>handlePlayerWonEvent()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a048a25454703f18820253e52be426305">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>handleScoreChangedEvent()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#aaec8084da6c9e63d066a327a4ceef920">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>handleTryStartGameEvent()
-: <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a8bdba4a2eac7580d0cdc1ee14f9d4623">TowerVR.MasterTowerGameManagerImpl</a>
-</li>
-<li>handleTurnStateChangedEvent()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a387b22b637c5e66e60c00ec0b3b9afa7">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>Host()
-: <a class="el" href="class_host_game.html#a59f855379c6fb63b906ed245ed388a05">HostGame</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
-<li>instance
-: <a class="el" href="class_singleton.html#ac160511cdbe3795f209bfdd1874dcacd">Singleton&lt; T &gt;</a>
-</li>
 <li>Instance
 : <a class="el" href="class_singleton.html#a54103e8475b2a352ee759d5732307534">Singleton&lt; T &gt;</a>
-</li>
-<li>IsValid()
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#afa0cc00d304b6dfacbb1903d80e0ec52">TowerVR.NetworkEventCodes</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
-<li>LevelIndex
-: <a class="el" href="class_gaze_over.html#afb006ee54b37d13da2a859469eaf1fea">GazeOver</a>
-</li>
-<li>LoadScene()
-: <a class="el" href="class_scene_transition_manager.html#a1779dbd605c614cf8baf0797f08b3240">SceneTransitionManager&lt; T &gt;</a>
-</li>
-<li>LogMalformedEventContent()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a30fb7cdde57c78be6c01ce6cd35412ae">TowerVR.TowerGameManagerImpl</a>
 </li>
 </ul>
 
@@ -276,71 +174,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>manager
 : <a class="el" href="class_tower_v_r_1_1_tower_game_behaviour.html#a5f0dc5fad7fbdcd09370d373329c00c7">TowerVR.TowerGameBehaviour</a>
 </li>
-<li>material
-: <a class="el" href="class_tower_v_r_1_1_tower_piece.html#a87cc9ad884bd6a1bcff5fd6ed809314b">TowerVR.TowerPiece</a>
-</li>
-<li>materials
-: <a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a61ce0fc19fb1800a95cb74efc7a7ab6f">TowerVR.TowerPieceSpawner</a>
-</li>
-<li>mesh
-: <a class="el" href="class_tower_v_r_1_1_tower_piece_info.html#a9a51d7505e2ab6497753a04fc5d0bda8">TowerVR.TowerPieceInfo</a>
-</li>
-<li>meshCollider
-: <a class="el" href="class_tower_v_r_1_1_tower_piece.html#a2165bbc9011d19cc2afc87b6400200a1">TowerVR.TowerPiece</a>
-</li>
-<li>meshFilter
-: <a class="el" href="class_tower_v_r_1_1_tower_piece.html#a6cd90f25eb69ac26afcc1c13c4fe7054">TowerVR.TowerPiece</a>
-</li>
-<li>myCamera
-: <a class="el" href="class_vuforia_1_1_lost_tracking.html#a62c8a70332b1f0127cf3bb5f05ae92c1">Vuforia.LostTracking</a>
-</li>
-<li>myCardboard
-: <a class="el" href="class_vuforia_1_1_lost_tracking.html#a579fe3de0682d2ab61f5cd8ddaaa2d52">Vuforia.LostTracking</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
-<li>Network_SpawnTowerPiece()
-: <a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a262d0e9b14f814ec49bc572d906d74f3">TowerVR.TowerPieceSpawner</a>
-</li>
-<li>NextPlayer
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#a5e272b0571a0a456b50e4b6e193ee7a6">TowerVR.NetworkEventCodes</a>
-</li>
-<li>NextPlayerEvent()
-: <a class="el" href="class_tower_v_r_1_1_next_player_event.html#a03b2f88c0362a6cbe6a136097ea0709d">TowerVR.NextPlayerEvent</a>
-</li>
-<li>NextPlayerTurnHandler()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a5cc6c300c296925e5e6b33a16e0553ca">TowerVR.TowerGameManager</a>
-</li>
-<li>nextPlayerTurnHandlers
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a129dec36b93852d13853309a2afad23d">TowerVR.TowerGameManager</a>
-</li>
 <li>notifyIsReady()
 : <a class="el" href="interface_tower_v_r_1_1_i_tower_game_manager.html#a3091c61e8ef71c592a8baf1e611489c0">TowerVR.ITowerGameManager</a>
 , <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a318dcef324a58787554cebe80c50ef64">TowerVR.MasterTowerGameManagerImpl</a>
 , <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a7ea173c143c836423cc25e8f0eed970d">TowerVR.TowerGameManager</a>
 , <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#ad4a2f3ff8f70fc26602d0c872d5cc36c">TowerVR.TowerGameManagerImpl</a>
 </li>
-<li>numSegments
-: <a class="el" href="class_torus.html#a5c0c35544de72aa99edaa76d5b7357d8">Torus</a>
-, <a class="el" href="class_torus_generator.html#ad259d2293d49c58c1ab23418cae7d462">TorusGenerator</a>
-</li>
-<li>numTubes
-: <a class="el" href="class_torus.html#a7f981e7fbdfedb7170aba45013673dff">Torus</a>
-, <a class="el" href="class_torus_generator.html#a7dbdd0f36b47f20ebdf8f235c1d3d27e">TorusGenerator</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
-<li>OnConnectedToMaster()
-: <a class="el" href="class_show_servers.html#a42a7450772bbf1ae31bf576dcf6322d3">ShowServers</a>
-, <a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a5318d7725ba9f0b6d0f215536c16a7a6">TowerVR.TowerPieceSpawner</a>
-</li>
-<li>OnDestroy()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a2aa9d1661b8b54be7309f6628a7e6128">TowerVR.TowerGameManagerImpl</a>
-</li>
 <li>onEvent()
 : <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a6b6e868d063e5c3a43908c0f81349cfb">TowerVR.MasterTowerGameManagerImpl</a>
 , <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a325b500869bda665a71fef31783976be">TowerVR.TowerGameManagerImpl</a>
@@ -355,207 +202,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="class_host_game.html#a938b6545e684d2692fef71f0729d60ee">HostGame</a>
 , <a class="el" href="class_show_servers.html#a6225eefc79ccf8ad46e38765dff9aba9">ShowServers</a>
 </li>
-<li>OnGazeTrigger()
-: <a class="el" href="class_gaze.html#aaf7abc54e33389721d1cf143559c0343">Gaze</a>
-, <a class="el" href="class_host_game.html#a031ce0a37abe4c80075bd15e2bf90d59">HostGame</a>
-, <a class="el" href="class_show_servers.html#a664954ef4360aedf96e6fb3070b96e19">ShowServers</a>
-</li>
-<li>OnJoinedRoom()
-: <a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a91f9b22165e13b30aebe5f52c5ab1805">TowerVR.TowerPieceSpawner</a>
-</li>
-<li>OnPointerEnter()
-: <a class="el" href="class_gaze_over.html#a8542b157da5e6c98d4500fa96b34e169">GazeOver</a>
-</li>
-<li>OnPointerExit()
-: <a class="el" href="class_gaze_over.html#ac6babe5ebb9a2fe681d559ab64b4f4ad">GazeOver</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
-<li>parent
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a97ba625071b296f357f329db279531a0">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>PhotonNetworkEvent()
-: <a class="el" href="class_photon_network_event.html#a6e2b8297deb4dfe3a6d8469f1e5334f7">PhotonNetworkEvent</a>
-</li>
 <li>placeTowerPiece()
 : <a class="el" href="interface_tower_v_r_1_1_i_tower_game_manager.html#aa800aded89d5de4af84321110f6eadd0">TowerVR.ITowerGameManager</a>
 , <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a653a15c9e2af6c11bbd9678cd54a716b">TowerVR.MasterTowerGameManagerImpl</a>
-</li>
-<li>PlaceTowerPiece
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#a58643360ed618f18cd05f799674b1b08">TowerVR.NetworkEventCodes</a>
-</li>
-<li>placeTowerPiece()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#aaa476cfb148a19c6579c38823dd37fd3">TowerVR.TowerGameManager</a>
+, <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#aaa476cfb148a19c6579c38823dd37fd3">TowerVR.TowerGameManager</a>
 , <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a47563c59b6d436c05a1f70c16aeb30e9">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>PlaceTowerPieceEvent()
-: <a class="el" href="class_tower_v_r_1_1_place_tower_piece_event.html#a3d2c63251ae5eaba62b4ba45ba33aee3">TowerVR.PlaceTowerPieceEvent</a>
-</li>
-<li>PlacingTowerPiece
-: <a class="el" href="class_tower_v_r_1_1_turn_time_limits.html#a90c299e1f4b47955972087aaee4c81e4">TowerVR.TurnTimeLimits</a>
-</li>
-<li>PlayerLost
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#afcd1188b4973aae637ba97e42ed8f6f7">TowerVR.NetworkEventCodes</a>
-</li>
-<li>PlayerLostEvent()
-: <a class="el" href="class_tower_v_r_1_1_player_lost_event.html#a4ecf91efaab9b6d6c50dd8946bd3b4c8">TowerVR.PlayerLostEvent</a>
-</li>
-<li>PlayerLostHandler()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a9caa83a7218ba6076cb2b486373bb8dc">TowerVR.TowerGameManager</a>
-</li>
-<li>playerLostHandlers
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a2bc2fd34f8a424f9ebdbea79b282f6ee">TowerVR.TowerGameManager</a>
-</li>
-<li>PlayerReady
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#a6370cf241512b8bd5896b0017c1208f8">TowerVR.NetworkEventCodes</a>
-</li>
-<li>PlayerReadyEvent()
-: <a class="el" href="class_tower_v_r_1_1_player_ready_event.html#a63119d42b4f59ac1682f5a1ddbaeeb47">TowerVR.PlayerReadyEvent</a>
-</li>
-<li>PlayerWon
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#a1a5584045672b73beab84ca8f6f64a95">TowerVR.NetworkEventCodes</a>
-</li>
-<li>PlayerWonEvent()
-: <a class="el" href="class_tower_v_r_1_1_player_won_event.html#ab32638f596ec8a7586dce0318a5d3239">TowerVR.PlayerWonEvent</a>
-</li>
-<li>PlayerWonHandler()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a686d2c9d0920eade95dc5a3156da132c">TowerVR.TowerGameManager</a>
-</li>
-<li>playerWonHandlers
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#ae676d69dff124b0d9c2e940b75588f8d">TowerVR.TowerGameManager</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
-<li>RefreshTorus()
-: <a class="el" href="class_torus.html#a11488676c74af823a124085c3af72aa3">Torus</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
-<li>score
-: <a class="el" href="struct_tower_v_r_1_1_score.html#a0c15824361f37b888d650812d162970d">TowerVR.Score</a>
-</li>
 <li>Score()
 : <a class="el" href="struct_tower_v_r_1_1_score.html#afecfe2d8892f0b5c0dce93d4fd4e2356">TowerVR.Score</a>
 </li>
-<li>ScoreChanged
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#a03ea2ad2c64ba5f91de0de0b02511597">TowerVR.NetworkEventCodes</a>
-</li>
-<li>ScoreChangedEvent()
-: <a class="el" href="class_tower_v_r_1_1_score_changed_event.html#aff763c9b3f5d45ebf05a94e2f5d5abdb">TowerVR.ScoreChangedEvent</a>
-</li>
-<li>ScoreUpdatedHandler()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#ab5e73141e867a0d3505f87cafe04f0f8">TowerVR.TowerGameManager</a>
-</li>
-<li>scoreUpdatedHandlers
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a8acf4a1219084e55e0c2a92eddf5cdf0">TowerVR.TowerGameManager</a>
-</li>
-<li>segmentRadius
-: <a class="el" href="class_torus.html#a8dd1e53cd1fb9415fbe64b7004ba274c">Torus</a>
-, <a class="el" href="class_torus_generator.html#aed33038eb45157a8feff1e38d07c09bb">TorusGenerator</a>
-</li>
-<li>SelectingTowerPiece
-: <a class="el" href="class_tower_v_r_1_1_turn_time_limits.html#ae3c0742a7d389534a0b3b1c4d229dc32">TowerVR.TurnTimeLimits</a>
-</li>
-<li>SelectTowerPieceEvent()
-: <a class="el" href="class_tower_v_r_1_1_select_tower_piece_event.html#ad7b86d65e0cd2538fa04f8a23f53ba4a">TowerVR.SelectTowerPieceEvent</a>
-</li>
-<li>SetGazedAt()
-: <a class="el" href="class_gaze.html#abda4c58f5d16dbbdfaf19a781f77ba06">Gaze</a>
-</li>
-<li>setReceivers()
-: <a class="el" href="class_photon_network_event.html#a7344442ecce18c3a78594f9a298a2572">PhotonNetworkEvent</a>
-</li>
-<li>SpawnCube()
-: <a class="el" href="class_show_servers.html#a69fabbb10d9ea266b32d767a0905ed25">ShowServers</a>
-</li>
-<li>SwitchScene()
-: <a class="el" href="class_gaze_over.html#a3bb891d7e1c1baf91593d2d975c98ef1">GazeOver</a>
+<li>score
+: <a class="el" href="struct_tower_v_r_1_1_score.html#a0c15824361f37b888d650812d162970d">TowerVR.Score</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
-<li>torus()
-: <a class="el" href="class_torus_generator.html#ace97cc7d5209d135b935407b7a554f50">TorusGenerator</a>
-</li>
-<li>torusGameObjectName
-: <a class="el" href="class_torus_generator.html#a0be1daa18ad5c4aa772471ded8e65dbe">TorusGenerator</a>
-</li>
-<li>towerPieceInfos
-: <a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a2ce360a9da394be0169dac4f2bf4ca2d">TowerVR.TowerPieceSpawner</a>
-</li>
-<li>TowerReacting
-: <a class="el" href="class_tower_v_r_1_1_turn_time_limits.html#a18f1e3032ab93929fd42da3da442461a">TowerVR.TurnTimeLimits</a>
-</li>
 <li>TryParse()
-: <a class="el" href="class_tower_v_r_1_1_game_state_changed_event.html#af9161b1f69f9b475336fcfd3514ccd57">TowerVR.GameStateChangedEvent</a>
+: <a class="el" href="class_tower_v_r_1_1_game_state_changed_event.html#af0b026428d28bcfe90b00ea8ba4c9c3c">TowerVR.GameStateChangedEvent</a>
 , <a class="el" href="class_tower_v_r_1_1_next_player_event.html#af9e780f7c4231e70f18c90b1911d067d">TowerVR.NextPlayerEvent</a>
 , <a class="el" href="class_tower_v_r_1_1_place_tower_piece_event.html#a8a17a8e6f863a9d0b0405279d0bb6ed4">TowerVR.PlaceTowerPieceEvent</a>
 , <a class="el" href="class_tower_v_r_1_1_player_lost_event.html#a1a5a7b6b2e4b15c97ae2b0da6be59afd">TowerVR.PlayerLostEvent</a>
 , <a class="el" href="class_tower_v_r_1_1_player_won_event.html#a97ee6f0bf2f5144573a98fd6eca935f2">TowerVR.PlayerWonEvent</a>
 , <a class="el" href="class_tower_v_r_1_1_score_changed_event.html#af3691bfe6c230ac7218d6d0723aedc49">TowerVR.ScoreChangedEvent</a>
 , <a class="el" href="class_tower_v_r_1_1_select_tower_piece_event.html#a104d8aa0fbb14ffc2be371814e18de0c">TowerVR.SelectTowerPieceEvent</a>
-, <a class="el" href="class_tower_v_r_1_1_turn_state_changed_event.html#a6710684aca4f7054992c2921a00f99d5">TowerVR.TurnStateChangedEvent</a>
-</li>
-<li>trySend()
-: <a class="el" href="class_photon_network_event.html#acbfe71760048a6edf950f710167b56ca">PhotonNetworkEvent</a>
-</li>
-<li>trySendError
-: <a class="el" href="class_photon_network_event.html#a26b1e1ac39a121ed6e202eeaaa5e7df1">PhotonNetworkEvent</a>
+, <a class="el" href="class_tower_v_r_1_1_turn_state_changed_event.html#af2a87f4c766ea138684caf2a79efeed7">TowerVR.TurnStateChangedEvent</a>
 </li>
 <li>tryStartGame()
 : <a class="el" href="interface_tower_v_r_1_1_i_tower_game_manager.html#a3b5866dd2b9659d65982f4ff651ee2c9">TowerVR.ITowerGameManager</a>
 , <a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a43cb29dc14b7d9dcd90b5826c49a380d">TowerVR.MasterTowerGameManagerImpl</a>
-</li>
-<li>TryStartGame
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#aa1759659405e5a0410e84b1ed204b610">TowerVR.NetworkEventCodes</a>
-</li>
-<li>tryStartGame()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a489f27c61ec3d5c29ac56fea0a024cf6">TowerVR.TowerGameManager</a>
+, <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#a489f27c61ec3d5c29ac56fea0a024cf6">TowerVR.TowerGameManager</a>
 , <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a04ad123026136abf9c009ff4c03937dc">TowerVR.TowerGameManagerImpl</a>
-</li>
-<li>TryStartGameEvent()
-: <a class="el" href="class_tower_v_r_1_1_try_start_game_event.html#ad46f3bc55a06465aca50090d06e719e3">TowerVR.TryStartGameEvent</a>
-</li>
-<li>tubeRadius
-: <a class="el" href="class_torus.html#af176474a9c7b704f10c2fd58b33771f8">Torus</a>
-, <a class="el" href="class_torus_generator.html#a7cbc4daec94ddb0bfbbb2740eb19932c">TorusGenerator</a>
-</li>
-<li>TurnStateChanged
-: <a class="el" href="class_tower_v_r_1_1_network_event_codes.html#a19fa1b33291d600fb7db35704e2d6295">TowerVR.NetworkEventCodes</a>
-</li>
-<li>TurnStateChangedEvent()
-: <a class="el" href="class_tower_v_r_1_1_turn_state_changed_event.html#ab69fa4b3346cb99c9e825e1673fce5a8">TowerVR.TurnStateChangedEvent</a>
-</li>
-<li>TurnStateChangedHandler()
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#aa05ec13ba870bbe24fe436ffe251889e">TowerVR.TowerGameManager</a>
-</li>
-<li>turnStateChangedHandlers
-: <a class="el" href="class_tower_v_r_1_1_tower_game_manager.html#aa659bd7720f3cfa335b291f30b7391bb">TowerVR.TowerGameManager</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
-<li>updateIntervalSeconds
-: <a class="el" href="class_transform_debugger.html#a73ef663cb15c97e23c7c64062909a3a2">TransformDebugger</a>
-</li>
-<li>useCustomDebugInterval
-: <a class="el" href="class_transform_debugger.html#aaf06d9c33dc9447d44bb7449ecf2c141">TransformDebugger</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

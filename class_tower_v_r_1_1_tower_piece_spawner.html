@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -67,6 +74,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_tower_v_r_1_1_tower_piece_spawner.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,11 +103,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_tower_v_r.html">TowerVR</a></li><li class="navelem"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html">TowerPieceSpawner</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -106,145 +123,41 @@ Inheritance diagram for TowerVR.TowerPieceSpawner:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a262d0e9b14f814ec49bc572d906d74f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a262d0e9b14f814ec49bc572d906d74f3">Network_SpawnTowerPiece</a> (Vector3 position, Vector3 eulerAngles, <a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273">TowerPieceDifficulty</a> difficulty)</td></tr>
+<tr class="memitem:a262d0e9b14f814ec49bc572d906d74f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a262d0e9b14f814ec49bc572d906d74f3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Network_SpawnTowerPiece</b> (Vector3 position, Vector3 eulerAngles, TowerPieceDifficulty difficulty)</td></tr>
 <tr class="separator:a262d0e9b14f814ec49bc572d906d74f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa167d6fdd1cd667dab34e935d9f82f57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#aa167d6fdd1cd667dab34e935d9f82f57">Network_SpawnTowerPiece</a> (Vector3 position, Vector3 eulerAngles)</td></tr>
+<tr class="memitem:aa167d6fdd1cd667dab34e935d9f82f57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa167d6fdd1cd667dab34e935d9f82f57"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Network_SpawnTowerPiece</b> (Vector3 position, Vector3 eulerAngles)</td></tr>
 <tr class="separator:aa167d6fdd1cd667dab34e935d9f82f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5318d7725ba9f0b6d0f215536c16a7a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a5318d7725ba9f0b6d0f215536c16a7a6">OnConnectedToMaster</a> ()</td></tr>
+<tr class="memitem:a5318d7725ba9f0b6d0f215536c16a7a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5318d7725ba9f0b6d0f215536c16a7a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnectedToMaster</b> ()</td></tr>
 <tr class="separator:a5318d7725ba9f0b6d0f215536c16a7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91f9b22165e13b30aebe5f52c5ab1805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a91f9b22165e13b30aebe5f52c5ab1805">OnJoinedRoom</a> ()</td></tr>
+<tr class="memitem:a91f9b22165e13b30aebe5f52c5ab1805"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f9b22165e13b30aebe5f52c5ab1805"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnJoinedRoom</b> ()</td></tr>
 <tr class="separator:a91f9b22165e13b30aebe5f52c5ab1805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a61ce0fc19fb1800a95cb74efc7a7ab6f"><td class="memItemLeft" align="right" valign="top">List&lt; Material &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a61ce0fc19fb1800a95cb74efc7a7ab6f">materials</a></td></tr>
+<tr class="memitem:a61ce0fc19fb1800a95cb74efc7a7ab6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61ce0fc19fb1800a95cb74efc7a7ab6f"></a>
+List&lt; Material &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>materials</b></td></tr>
 <tr class="separator:a61ce0fc19fb1800a95cb74efc7a7ab6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ce360a9da394be0169dac4f2bf4ca2d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_tower_v_r_1_1_tower_piece_info.html">TowerPieceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html#a2ce360a9da394be0169dac4f2bf4ca2d">towerPieceInfos</a></td></tr>
+<tr class="memitem:a2ce360a9da394be0169dac4f2bf4ca2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ce360a9da394be0169dac4f2bf4ca2d"></a>
+List&lt; <a class="el" href="class_tower_v_r_1_1_tower_piece_info.html">TowerPieceInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>towerPieceInfos</b></td></tr>
 <tr class="separator:a2ce360a9da394be0169dac4f2bf4ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a262d0e9b14f814ec49bc572d906d74f3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TowerVR.TowerPieceSpawner.Network_SpawnTowerPiece </td>
-          <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>eulerAngles</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273">TowerPieceDifficulty</a>&#160;</td>
-          <td class="paramname"><em>difficulty</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa167d6fdd1cd667dab34e935d9f82f57"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TowerVR.TowerPieceSpawner.Network_SpawnTowerPiece </td>
-          <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>eulerAngles</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5318d7725ba9f0b6d0f215536c16a7a6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TowerVR.TowerPieceSpawner.OnConnectedToMaster </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a91f9b22165e13b30aebe5f52c5ab1805"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TowerVR.TowerPieceSpawner.OnJoinedRoom </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a61ce0fc19fb1800a95cb74efc7a7ab6f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;Material&gt; TowerVR.TowerPieceSpawner.materials</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2ce360a9da394be0169dac4f2bf4ca2d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;<a class="el" href="class_tower_v_r_1_1_tower_piece_info.html">TowerPieceInfo</a>&gt; TowerVR.TowerPieceSpawner.towerPieceInfos</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/Custom/Game/Tower/<a class="el" href="_tower_piece_spawner_8cs.html">TowerPieceSpawner.cs</a></li>
+<li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/Game/Tower/TowerPieceSpawner.cs</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tower_v_r.html">TowerVR</a></li><li class="navelem"><a class="el" href="class_tower_v_r_1_1_tower_piece_spawner.html">TowerPieceSpawner</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

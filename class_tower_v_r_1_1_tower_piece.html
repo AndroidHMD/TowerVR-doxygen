@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -67,6 +74,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_tower_v_r_1_1_tower_piece.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,11 +103,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_tower_v_r.html">TowerVR</a></li><li class="navelem"><a class="el" href="class_tower_v_r_1_1_tower_piece.html">TowerPiece</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -107,21 +124,26 @@ Inheritance diagram for TowerVR.TowerPiece:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a686d6c1c40c7a45e6b3bb9f31b79b12d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_tower_v_r_1_1_tower_piece.html">TowerPiece</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece.html#a686d6c1c40c7a45e6b3bb9f31b79b12d">Create</a> (<a class="el" href="class_tower_v_r_1_1_tower_piece_info.html">TowerPieceInfo</a> info, Material <a class="el" href="class_tower_v_r_1_1_tower_piece.html#a87cc9ad884bd6a1bcff5fd6ed809314b">material</a>)</td></tr>
+<tr class="memitem:a686d6c1c40c7a45e6b3bb9f31b79b12d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_tower_v_r_1_1_tower_piece.html">TowerPiece</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece.html#a686d6c1c40c7a45e6b3bb9f31b79b12d">Create</a> (<a class="el" href="class_tower_v_r_1_1_tower_piece_info.html">TowerPieceInfo</a> info, Material material)</td></tr>
 <tr class="separator:a686d6c1c40c7a45e6b3bb9f31b79b12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_networked_behaviour"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_networked_behaviour')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_networked_behaviour.html">NetworkedBehaviour</a></td></tr>
-<tr class="memitem:a59d7978c054fa5226c43a82566d35877 inherit pub_static_methods_class_networked_behaviour"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_networked_behaviour.html#a59d7978c054fa5226c43a82566d35877">GetUniquePhotonViewID</a> ()</td></tr>
+<tr class="memitem:a59d7978c054fa5226c43a82566d35877 inherit pub_static_methods_class_networked_behaviour"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59d7978c054fa5226c43a82566d35877"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetUniquePhotonViewID</b> ()</td></tr>
 <tr class="separator:a59d7978c054fa5226c43a82566d35877 inherit pub_static_methods_class_networked_behaviour"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a80a1261ef724785a25d02a36cf26f7a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273">TowerPieceDifficulty</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece.html#a80a1261ef724785a25d02a36cf26f7a1">difficulty</a><code> [get]</code></td></tr>
+<tr class="memitem:a80a1261ef724785a25d02a36cf26f7a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80a1261ef724785a25d02a36cf26f7a1"></a>
+TowerPieceDifficulty&#160;</td><td class="memItemRight" valign="bottom"><b>difficulty</b><code> [get]</code></td></tr>
 <tr class="separator:a80a1261ef724785a25d02a36cf26f7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd90f25eb69ac26afcc1c13c4fe7054"><td class="memItemLeft" align="right" valign="top">MeshFilter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece.html#a6cd90f25eb69ac26afcc1c13c4fe7054">meshFilter</a><code> [get]</code></td></tr>
+<tr class="memitem:a6cd90f25eb69ac26afcc1c13c4fe7054"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cd90f25eb69ac26afcc1c13c4fe7054"></a>
+MeshFilter&#160;</td><td class="memItemRight" valign="bottom"><b>meshFilter</b><code> [get]</code></td></tr>
 <tr class="separator:a6cd90f25eb69ac26afcc1c13c4fe7054"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2165bbc9011d19cc2afc87b6400200a1"><td class="memItemLeft" align="right" valign="top">MeshCollider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece.html#a2165bbc9011d19cc2afc87b6400200a1">meshCollider</a><code> [get]</code></td></tr>
+<tr class="memitem:a2165bbc9011d19cc2afc87b6400200a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2165bbc9011d19cc2afc87b6400200a1"></a>
+MeshCollider&#160;</td><td class="memItemRight" valign="bottom"><b>meshCollider</b><code> [get]</code></td></tr>
 <tr class="separator:a2165bbc9011d19cc2afc87b6400200a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87cc9ad884bd6a1bcff5fd6ed809314b"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_piece.html#a87cc9ad884bd6a1bcff5fd6ed809314b">material</a><code> [get]</code></td></tr>
+<tr class="memitem:a87cc9ad884bd6a1bcff5fd6ed809314b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87cc9ad884bd6a1bcff5fd6ed809314b"></a>
+Material&#160;</td><td class="memItemRight" valign="bottom"><b>material</b><code> [get]</code></td></tr>
 <tr class="separator:a87cc9ad884bd6a1bcff5fd6ed809314b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -163,96 +185,19 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Property Documentation</h2>
-<a class="anchor" id="a80a1261ef724785a25d02a36cf26f7a1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_tower_v_r.html#a84917c8a9c1c65b2e7428f40c090f273">TowerPieceDifficulty</a> TowerVR.TowerPiece.difficulty</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a87cc9ad884bd6a1bcff5fd6ed809314b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Material TowerVR.TowerPiece.material</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2165bbc9011d19cc2afc87b6400200a1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">MeshCollider TowerVR.TowerPiece.meshCollider</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6cd90f25eb69ac26afcc1c13c4fe7054"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">MeshFilter TowerVR.TowerPiece.meshFilter</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/Custom/Game/Tower/<a class="el" href="_tower_piece_8cs.html">TowerPiece.cs</a></li>
+<li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/Game/Tower/TowerPiece.cs</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tower_v_r.html">TowerVR</a></li><li class="navelem"><a class="el" href="class_tower_v_r_1_1_tower_piece.html">TowerPiece</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

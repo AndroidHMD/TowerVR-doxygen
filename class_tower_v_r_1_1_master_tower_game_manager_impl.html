@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -40,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -67,6 +74,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_tower_v_r_1_1_master_tower_game_manager_impl.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,11 +103,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_tower_v_r.html">TowerVR</a></li><li class="navelem"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html">MasterTowerGameManagerImpl</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -118,43 +135,57 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a920da97216b0b70d5cc3c9d9a6ef0009"><td class="memItemLeft" align="right" valign="top">sealed override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a920da97216b0b70d5cc3c9d9a6ef0009">Awake</a> ()</td></tr>
+<tr class="memitem:a920da97216b0b70d5cc3c9d9a6ef0009"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a920da97216b0b70d5cc3c9d9a6ef0009"></a>
+sealed override void&#160;</td><td class="memItemRight" valign="bottom"><b>Awake</b> ()</td></tr>
 <tr class="separator:a920da97216b0b70d5cc3c9d9a6ef0009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b6e868d063e5c3a43908c0f81349cfb"><td class="memItemLeft" align="right" valign="top">sealed override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a6b6e868d063e5c3a43908c0f81349cfb">onEvent</a> (byte eventCode, object content, int senderID)</td></tr>
 <tr class="separator:a6b6e868d063e5c3a43908c0f81349cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a308a6d258b02fd2c9ee1f9e8d0445dd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a308a6d258b02fd2c9ee1f9e8d0445dd4">handlePlayerReadyEvent</a> (int playerID)</td></tr>
-<tr class="memdesc:a308a6d258b02fd2c9ee1f9e8d0445dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_photon_network_event.html">PhotonNetworkEvent</a> handles ///.  <a href="#a308a6d258b02fd2c9ee1f9e8d0445dd4">More...</a><br /></td></tr>
+<tr class="memitem:a308a6d258b02fd2c9ee1f9e8d0445dd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a308a6d258b02fd2c9ee1f9e8d0445dd4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a308a6d258b02fd2c9ee1f9e8d0445dd4">handlePlayerReadyEvent</a> (int playerID)</td></tr>
+<tr class="memdesc:a308a6d258b02fd2c9ee1f9e8d0445dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_photon_network_event.html">PhotonNetworkEvent</a> handles ///. <br /></td></tr>
 <tr class="separator:a308a6d258b02fd2c9ee1f9e8d0445dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdba4a2eac7580d0cdc1ee14f9d4623"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#a8bdba4a2eac7580d0cdc1ee14f9d4623">handleTryStartGameEvent</a> (int playerID)</td></tr>
+<tr class="memitem:a8bdba4a2eac7580d0cdc1ee14f9d4623"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bdba4a2eac7580d0cdc1ee14f9d4623"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>handleTryStartGameEvent</b> (int playerID)</td></tr>
 <tr class="separator:a8bdba4a2eac7580d0cdc1ee14f9d4623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6f458a4a2437d060b6940cf01603ebf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html#ac6f458a4a2437d060b6940cf01603ebf">handlePlaceTowerPieceEvent</a> (int playerID, float posX, float posZ, float rotDegreesY)</td></tr>
+<tr class="memitem:ac6f458a4a2437d060b6940cf01603ebf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6f458a4a2437d060b6940cf01603ebf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>handlePlaceTowerPieceEvent</b> (int playerID, float posX, float posZ, float rotDegreesY)</td></tr>
 <tr class="separator:ac6f458a4a2437d060b6940cf01603ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_tower_v_r_1_1_tower_game_manager_impl')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html">TowerVR.TowerGameManagerImpl</a></td></tr>
-<tr class="memitem:a2aa9d1661b8b54be7309f6628a7e6128 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a2aa9d1661b8b54be7309f6628a7e6128">OnDestroy</a> ()</td></tr>
+<tr class="memitem:a2aa9d1661b8b54be7309f6628a7e6128 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2aa9d1661b8b54be7309f6628a7e6128"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
 <tr class="separator:a2aa9d1661b8b54be7309f6628a7e6128 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e230366e77ebf760fa5a5aacb696585 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a1e230366e77ebf760fa5a5aacb696585">handleGameStateChangedEvent</a> (int gameState)</td></tr>
+<tr class="memitem:a1e230366e77ebf760fa5a5aacb696585 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e230366e77ebf760fa5a5aacb696585"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>handleGameStateChangedEvent</b> (int gameState)</td></tr>
 <tr class="separator:a1e230366e77ebf760fa5a5aacb696585 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a387b22b637c5e66e60c00ec0b3b9afa7 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a387b22b637c5e66e60c00ec0b3b9afa7">handleTurnStateChangedEvent</a> (int turnState)</td></tr>
+<tr class="memitem:a387b22b637c5e66e60c00ec0b3b9afa7 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a387b22b637c5e66e60c00ec0b3b9afa7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>handleTurnStateChangedEvent</b> (int turnState)</td></tr>
 <tr class="separator:a387b22b637c5e66e60c00ec0b3b9afa7 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c2a0d3022dd3e23095280cc5c10de4 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a94c2a0d3022dd3e23095280cc5c10de4">handleNextPlayerEvent</a> (int nextPlayerID)</td></tr>
+<tr class="memitem:a94c2a0d3022dd3e23095280cc5c10de4 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94c2a0d3022dd3e23095280cc5c10de4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>handleNextPlayerEvent</b> (int nextPlayerID)</td></tr>
 <tr class="separator:a94c2a0d3022dd3e23095280cc5c10de4 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec8084da6c9e63d066a327a4ceef920 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#aaec8084da6c9e63d066a327a4ceef920">handleScoreChangedEvent</a> (int playerID, <a class="el" href="struct_tower_v_r_1_1_score.html">Score</a> score)</td></tr>
+<tr class="memitem:aaec8084da6c9e63d066a327a4ceef920 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaec8084da6c9e63d066a327a4ceef920"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>handleScoreChangedEvent</b> (int playerID, <a class="el" href="struct_tower_v_r_1_1_score.html">Score</a> score)</td></tr>
 <tr class="separator:aaec8084da6c9e63d066a327a4ceef920 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2229c85a77dd3e8487d9d127d6a084c4 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a2229c85a77dd3e8487d9d127d6a084c4">handlePlayerLostEvent</a> (int playerID)</td></tr>
+<tr class="memitem:a2229c85a77dd3e8487d9d127d6a084c4 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2229c85a77dd3e8487d9d127d6a084c4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>handlePlayerLostEvent</b> (int playerID)</td></tr>
 <tr class="separator:a2229c85a77dd3e8487d9d127d6a084c4 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a048a25454703f18820253e52be426305 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a048a25454703f18820253e52be426305">handlePlayerWonEvent</a> (int playerID)</td></tr>
+<tr class="memitem:a048a25454703f18820253e52be426305 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a048a25454703f18820253e52be426305"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>handlePlayerWonEvent</b> (int playerID)</td></tr>
 <tr class="separator:a048a25454703f18820253e52be426305 inherit pro_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_tower_v_r_1_1_tower_game_manager_impl"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_tower_v_r_1_1_tower_game_manager_impl')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html">TowerVR.TowerGameManagerImpl</a></td></tr>
-<tr class="memitem:a97ba625071b296f357f329db279531a0 inherit pub_attribs_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tower_v_r_1_1_tower_game_manager.html">TowerGameManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a97ba625071b296f357f329db279531a0">parent</a></td></tr>
+<tr class="memitem:a97ba625071b296f357f329db279531a0 inherit pub_attribs_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97ba625071b296f357f329db279531a0"></a>
+<a class="el" href="class_tower_v_r_1_1_tower_game_manager.html">TowerGameManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b></td></tr>
 <tr class="separator:a97ba625071b296f357f329db279531a0 inherit pub_attribs_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_class_tower_v_r_1_1_tower_game_manager_impl')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html">TowerVR.TowerGameManagerImpl</a></td></tr>
-<tr class="memitem:a30fb7cdde57c78be6c01ce6cd35412ae inherit pro_static_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a30fb7cdde57c78be6c01ce6cd35412ae">LogMalformedEventContent</a> (string eventName, int senderID)</td></tr>
+<tr class="memitem:a30fb7cdde57c78be6c01ce6cd35412ae inherit pro_static_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30fb7cdde57c78be6c01ce6cd35412ae"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LogMalformedEventContent</b> (string eventName, int senderID)</td></tr>
 <tr class="separator:a30fb7cdde57c78be6c01ce6cd35412ae inherit pro_static_methods_class_tower_v_r_1_1_tower_game_manager_impl"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_class_singleton"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_singleton')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="class_singleton.html">Singleton&lt; TowerGameManagerImpl &gt;</a></td></tr>
-<tr class="memitem:ac160511cdbe3795f209bfdd1874dcacd inherit pro_static_attribs_class_singleton"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_singleton.html#ac160511cdbe3795f209bfdd1874dcacd">instance</a></td></tr>
+<tr class="memitem:ac160511cdbe3795f209bfdd1874dcacd inherit pro_static_attribs_class_singleton"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac160511cdbe3795f209bfdd1874dcacd"></a>
+static T&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b></td></tr>
 <tr class="separator:ac160511cdbe3795f209bfdd1874dcacd inherit pro_static_attribs_class_singleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_singleton"><td colspan="2" onclick="javascript:toggleInherit('properties_class_singleton')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_singleton.html">Singleton&lt; TowerGameManagerImpl &gt;</a></td></tr>
 <tr class="memitem:a54103e8475b2a352ee759d5732307534 inherit properties_class_singleton"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_singleton.html#a54103e8475b2a352ee759d5732307534">Instance</a><code> [get]</code></td></tr>
@@ -163,127 +194,6 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="interface_tower_v_r_1_1_i_tower_game_manager.html">ITowerGameManager</a> that represents the master client's instance. This keeps track of the state as well. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a920da97216b0b70d5cc3c9d9a6ef0009"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sealed override void TowerVR.MasterTowerGameManagerImpl.Awake </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="class_tower_v_r_1_1_tower_game_manager_impl.html#a3351d08f215064960524516af7e39055">TowerVR.TowerGameManagerImpl</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac6f458a4a2437d060b6940cf01603ebf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TowerVR.MasterTowerGameManagerImpl.handlePlaceTowerPieceEvent </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>playerID</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>posX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>posZ</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>rotDegreesY</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a308a6d258b02fd2c9ee1f9e8d0445dd4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TowerVR.MasterTowerGameManagerImpl.handlePlayerReadyEvent </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>playerID</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="class_photon_network_event.html">PhotonNetworkEvent</a> handles ///. </p>
-
-</div>
-</div>
-<a class="anchor" id="a8bdba4a2eac7580d0cdc1ee14f9d4623"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void TowerVR.MasterTowerGameManagerImpl.handleTryStartGameEvent </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>playerID</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a318dcef324a58787554cebe80c50ef64"></a>
 <div class="memitem">
 <div class="memproto">
@@ -423,14 +333,18 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/Custom/Game/Tower/Manager/Impl/<a class="el" href="_master_tower_game_manager_impl_8cs.html">MasterTowerGameManagerImpl.cs</a></li>
+<li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/Game/Tower/Manager/Impl/MasterTowerGameManagerImpl.cs</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.11
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tower_v_r.html">TowerVR</a></li><li class="navelem"><a class="el" href="class_tower_v_r_1_1_master_tower_game_manager_impl.html">MasterTowerGameManagerImpl</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
 </body>
 </html>

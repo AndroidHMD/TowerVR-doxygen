@@ -1,0 +1,48 @@
+\hypertarget{class_spawn_selected_level}{}\section{Spawn\+Selected\+Level Class Reference}
+\label{class_spawn_selected_level}\index{Spawn\+Selected\+Level@{Spawn\+Selected\+Level}}
+Inheritance diagram for Spawn\+Selected\+Level\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_spawn_selected_level}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object {\bfseries Level\+Components}\hypertarget{class_spawn_selected_level_a604f58d67bb353137f526689fecd1738}{}\label{class_spawn_selected_level_a604f58d67bb353137f526689fecd1738}
+
+\item 
+Material {\bfseries Material1}\hypertarget{class_spawn_selected_level_a366848fc78a8c064b11ca751d3d6025a}{}\label{class_spawn_selected_level_a366848fc78a8c064b11ca751d3d6025a}
+
+\item 
+Material {\bfseries Skybox}\hypertarget{class_spawn_selected_level_a13d055e319c08c9e52f37d8b810889f0}{}\label{class_spawn_selected_level_a13d055e319c08c9e52f37d8b810889f0}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static string \hyperlink{class_spawn_selected_level_a8d218aa712c1464b1e6a928e52cdb56f}{Loaded\+Level}
+\item 
+static string {\bfseries Loaded\+Material1}\hypertarget{class_spawn_selected_level_a47b76272906237a6f5eb652908cebda6}{}\label{class_spawn_selected_level_a47b76272906237a6f5eb652908cebda6}
+
+\item 
+static string {\bfseries Loaded\+Skybox}\hypertarget{class_spawn_selected_level_a572973e025315254b42897c1bf2d5f3e}{}\label{class_spawn_selected_level_a572973e025315254b42897c1bf2d5f3e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\index{Spawn\+Selected\+Level@{Spawn\+Selected\+Level}!Loaded\+Level@{Loaded\+Level}}
+\index{Loaded\+Level@{Loaded\+Level}!Spawn\+Selected\+Level@{Spawn\+Selected\+Level}}
+\subsubsection[{\texorpdfstring{Loaded\+Level}{LoadedLevel}}]{\setlength{\rightskip}{0pt plus 5cm}string Spawn\+Selected\+Level.\+Loaded\+Level\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_spawn_selected_level_a8d218aa712c1464b1e6a928e52cdb56f}{}\label{class_spawn_selected_level_a8d218aa712c1464b1e6a928e52cdb56f}
+Assume the level selection scene is \char`\"{}\+Scene 0\char`\"{} and the game scene is \char`\"{}\+Scene 1\char`\"{}.
+
+Add this script to the scene manager in the game scene. (Scene 1) This scripts needs info form another script on the level-\/selection object ( in Scene 0). The public static string variables in this scripts should be assigned when clicking the level-\/selection object (in another script in scene 0). -\/\+EX\+: On\+Click()\{\hyperlink{class_spawn_selected_level_a8d218aa712c1464b1e6a928e52cdb56f}{Spawn\+Selected\+Level.\+Loaded\+Level} = Level\+Name;\} //\+When clicking (selecting the level), set the name of the prefab level to load.
+
+See example in the script \char`\"{}\+Mouse\+Over.\+cs\char`\"{} in the Unity/\+Scripts folder (Google Drive).
+
+O\+BS\+: Remember to destroy objects when leaving the scene. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/benjamin/\+Programmering/\+Android\+H\+M\+D/\+Tower\+V\+R/\+Assets/\+Scripts/\+Custom/Spawn\+Selected\+Level.\+cs\end{DoxyCompactItemize}

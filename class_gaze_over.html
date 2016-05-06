@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>TowerVR: GazeOver Class Reference</title>
+<title>My Project: GazeOver Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">TowerVR
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -46,7 +46,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -126,6 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bb891d7e1c1baf91593d2d975c98ef1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bb891d7e1c1baf91593d2d975c98ef1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SwitchScene</b> ()</td></tr>
 <tr class="separator:a3bb891d7e1c1baf91593d2d975c98ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b841907b39b75f68a04fef02a5923d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81b841907b39b75f68a04fef02a5923d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadScene</b> ()</td></tr>
+<tr class="separator:a81b841907b39b75f68a04fef02a5923d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8542b157da5e6c98d4500fa96b34e169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8542b157da5e6c98d4500fa96b34e169"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPointerEnter</b> ()</td></tr>
 <tr class="separator:a8542b157da5e6c98d4500fa96b34e169"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,11 +137,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPointerExit</b> ()<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afb006ee54b37d13da2a859469eaf1fea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb006ee54b37d13da2a859469eaf1fea"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>LevelIndex</b></td></tr>
-<tr class="separator:afb006ee54b37d13da2a859469eaf1fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3d93693093000a182971f54abea678"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f3d93693093000a182971f54abea678"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadSceneForAllPlayers</b> = false</td></tr>
+<tr class="separator:a1f3d93693093000a182971f54abea678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da14b1f14785e43084c6f5adeb7e641"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4da14b1f14785e43084c6f5adeb7e641"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>levelIndex</b></td></tr>
+<tr class="separator:a4da14b1f14785e43084c6f5adeb7e641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a737fc0bbf32691a235d632475daab772"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a737fc0bbf32691a235d632475daab772"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>LevelName</b></td></tr>
+<tr class="separator:a737fc0bbf32691a235d632475daab772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa5c39e1a53eeda5e00a1727da499c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaa5c39e1a53eeda5e00a1727da499c6"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>LevelMaterial1</b></td></tr>
+<tr class="separator:abaa5c39e1a53eeda5e00a1727da499c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fffd931b90309c155a73342ab4c50f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0fffd931b90309c155a73342ab4c50f"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>LevelSkybox</b></td></tr>
+<tr class="separator:ae0fffd931b90309c155a73342ab4c50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class for switching scenes. How to use: Make sure your object has a Collider. Add this script and set which scene it should chnage to with index (from build settings). Add EventTrigger-component and use Pointer Down, Pointer Enter, Pointer Exit for the functions below. Check the box for the loadSceneForAllPlayers variable to use Photons functionality to sync the loaded scene. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/GazeOver.cs</li>
 </ul>
 </div><!-- contents -->

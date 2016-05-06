@@ -1,0 +1,73 @@
+\hypertarget{interface_tower_v_r_1_1_i_tower_game_manager}{}\section{Tower\+V\+R.\+I\+Tower\+Game\+Manager Interface Reference}
+\label{interface_tower_v_r_1_1_i_tower_game_manager}\index{Tower\+V\+R.\+I\+Tower\+Game\+Manager@{Tower\+V\+R.\+I\+Tower\+Game\+Manager}}
+Inheritance diagram for Tower\+V\+R.\+I\+Tower\+Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_tower_v_r_1_1_i_tower_game_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager_a3091c61e8ef71c592a8baf1e611489c0}{notify\+Is\+Ready} ()
+\item 
+void \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager_a3b5866dd2b9659d65982f4ff651ee2c9}{try\+Start\+Game} ()
+\item 
+void \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager_aa800aded89d5de4af84321110f6eadd0}{place\+Tower\+Piece} (float positionX, float positionZ, float rotation\+DegreesY)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to the class that controls the game logic.
+
+The class handles\+:
+\begin{DoxyItemize}
+\item Game state\+: is the game running? Has it ended?
+\item Turn state\+: what action is the current player doing?
+\item Turn order\+: In what order does the players play? Has anyone lost yet?
+\item Scores
+\end{DoxyItemize}
+
+The implementing class is either a local instance (if the current client is the master client), or a remote instance (if the current client is N\+OT the master client). 
+
+\subsection{Member Function Documentation}
+\index{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager}!notify\+Is\+Ready@{notify\+Is\+Ready}}
+\index{notify\+Is\+Ready@{notify\+Is\+Ready}!Tower\+V\+R\+::\+I\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager}}
+\subsubsection[{\texorpdfstring{notify\+Is\+Ready()}{notifyIsReady()}}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+V\+R.\+I\+Tower\+Game\+Manager.\+notify\+Is\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_tower_v_r_1_1_i_tower_game_manager_a3091c61e8ef71c592a8baf1e611489c0}{}\label{interface_tower_v_r_1_1_i_tower_game_manager_a3091c61e8ef71c592a8baf1e611489c0}
+Call this to notify that this client is ready to start the game. 
+
+Implemented in \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_ad4a2f3ff8f70fc26602d0c872d5cc36c}{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}, \hyperlink{class_tower_v_r_1_1_tower_game_manager_a7ea173c143c836423cc25e8f0eed970d}{Tower\+V\+R.\+Tower\+Game\+Manager}, and \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a318dcef324a58787554cebe80c50ef64}{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}.
+
+\index{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager}!place\+Tower\+Piece@{place\+Tower\+Piece}}
+\index{place\+Tower\+Piece@{place\+Tower\+Piece}!Tower\+V\+R\+::\+I\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager}}
+\subsubsection[{\texorpdfstring{place\+Tower\+Piece(float position\+X, float position\+Z, float rotation\+Degrees\+Y)}{placeTowerPiece(float positionX, float positionZ, float rotationDegreesY)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+V\+R.\+I\+Tower\+Game\+Manager.\+place\+Tower\+Piece (
+\begin{DoxyParamCaption}
+\item[{float}]{positionX, }
+\item[{float}]{positionZ, }
+\item[{float}]{rotation\+DegreesY}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_tower_v_r_1_1_i_tower_game_manager_aa800aded89d5de4af84321110f6eadd0}{}\label{interface_tower_v_r_1_1_i_tower_game_manager_aa800aded89d5de4af84321110f6eadd0}
+Call this to place a tower piece. Will fail silently if it is not the client\textquotesingle{}s turn. 
+
+Implemented in \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a47563c59b6d436c05a1f70c16aeb30e9}{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}, \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a653a15c9e2af6c11bbd9678cd54a716b}{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}, and \hyperlink{class_tower_v_r_1_1_tower_game_manager_aaa476cfb148a19c6579c38823dd37fd3}{Tower\+V\+R.\+Tower\+Game\+Manager}.
+
+\index{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager}!try\+Start\+Game@{try\+Start\+Game}}
+\index{try\+Start\+Game@{try\+Start\+Game}!Tower\+V\+R\+::\+I\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+I\+Tower\+Game\+Manager}}
+\subsubsection[{\texorpdfstring{try\+Start\+Game()}{tryStartGame()}}]{\setlength{\rightskip}{0pt plus 5cm}void Tower\+V\+R.\+I\+Tower\+Game\+Manager.\+try\+Start\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{interface_tower_v_r_1_1_i_tower_game_manager_a3b5866dd2b9659d65982f4ff651ee2c9}{}\label{interface_tower_v_r_1_1_i_tower_game_manager_a3b5866dd2b9659d65982f4ff651ee2c9}
+Tries to start the game. Will fail silently. If it succeeds the client will be alerted through its Game\+State\+Changed\+Handler. 
+
+Implemented in \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a04ad123026136abf9c009ff4c03937dc}{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}, \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a43cb29dc14b7d9dcd90b5826c49a380d}{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}, and \hyperlink{class_tower_v_r_1_1_tower_game_manager_a489f27c61ec3d5c29ac56fea0a024cf6}{Tower\+V\+R.\+Tower\+Game\+Manager}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/benjamin/\+Programmering/\+Android\+H\+M\+D/\+Tower\+V\+R/\+Assets/\+Scripts/\+Custom/\+Game/\+Tower/\+Manager/I\+Tower\+Game\+Manager.\+cs\end{DoxyCompactItemize}

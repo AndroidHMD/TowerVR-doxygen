@@ -1,0 +1,94 @@
+\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl}{}\section{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl Class Reference}
+\label{class_tower_v_r_1_1_master_tower_game_manager_impl}\index{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}}
+Inheritance diagram for Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tower_v_r_1_1_master_tower_game_manager_impl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sealed override void \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a318dcef324a58787554cebe80c50ef64}{notify\+Is\+Ready} ()
+\item 
+sealed override void \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a43cb29dc14b7d9dcd90b5826c49a380d}{try\+Start\+Game} ()
+\item 
+sealed override void \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a653a15c9e2af6c11bbd9678cd54a716b}{place\+Tower\+Piece} (float positionX, float positionZ, float rotation\+DegreesY)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sealed override void {\bfseries Awake} ()\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_a920da97216b0b70d5cc3c9d9a6ef0009}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_a920da97216b0b70d5cc3c9d9a6ef0009}
+
+\item 
+sealed override void \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a6b6e868d063e5c3a43908c0f81349cfb}{on\+Event} (byte event\+Code, object content, int sender\+ID)
+\item 
+void \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a308a6d258b02fd2c9ee1f9e8d0445dd4}{handle\+Player\+Ready\+Event} (int player\+ID)\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_a308a6d258b02fd2c9ee1f9e8d0445dd4}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_a308a6d258b02fd2c9ee1f9e8d0445dd4}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_photon_network_event}{Photon\+Network\+Event} handles ///. \end{DoxyCompactList}\item 
+void {\bfseries handle\+Try\+Start\+Game\+Event} (int player\+ID)\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_a8bdba4a2eac7580d0cdc1ee14f9d4623}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_a8bdba4a2eac7580d0cdc1ee14f9d4623}
+
+\item 
+void {\bfseries handle\+Place\+Tower\+Piece\+Event} (int player\+ID, float posX, float posZ, float rot\+DegreesY)\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_ac6f458a4a2437d060b6940cf01603ebf}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_ac6f458a4a2437d060b6940cf01603ebf}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager}{I\+Tower\+Game\+Manager} that represents the master client\textquotesingle{}s instance. This keeps track of the state as well. 
+
+\subsection{Member Function Documentation}
+\index{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}!notify\+Is\+Ready@{notify\+Is\+Ready}}
+\index{notify\+Is\+Ready@{notify\+Is\+Ready}!Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{notify\+Is\+Ready()}{notifyIsReady()}}]{\setlength{\rightskip}{0pt plus 5cm}sealed override void Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl.\+notify\+Is\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_a318dcef324a58787554cebe80c50ef64}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_a318dcef324a58787554cebe80c50ef64}
+Overrides the event-\/sending to directly alert this implementation. 
+
+Reimplemented from \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_ad4a2f3ff8f70fc26602d0c872d5cc36c}{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}.
+
+\index{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}!on\+Event@{on\+Event}}
+\index{on\+Event@{on\+Event}!Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{on\+Event(byte event\+Code, object content, int sender\+I\+D)}{onEvent(byte eventCode, object content, int senderID)}}]{\setlength{\rightskip}{0pt plus 5cm}sealed override void Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl.\+on\+Event (
+\begin{DoxyParamCaption}
+\item[{byte}]{event\+Code, }
+\item[{object}]{content, }
+\item[{int}]{sender\+ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_a6b6e868d063e5c3a43908c0f81349cfb}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_a6b6e868d063e5c3a43908c0f81349cfb}
+Receives events from the master client and alerts the observer delegates (i.\+e. Tower\+Game\+Behaviours). 
+
+Reimplemented from \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a325b500869bda665a71fef31783976be}{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}.
+
+\index{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}!place\+Tower\+Piece@{place\+Tower\+Piece}}
+\index{place\+Tower\+Piece@{place\+Tower\+Piece}!Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{place\+Tower\+Piece(float position\+X, float position\+Z, float rotation\+Degrees\+Y)}{placeTowerPiece(float positionX, float positionZ, float rotationDegreesY)}}]{\setlength{\rightskip}{0pt plus 5cm}sealed override void Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl.\+place\+Tower\+Piece (
+\begin{DoxyParamCaption}
+\item[{float}]{positionX, }
+\item[{float}]{positionZ, }
+\item[{float}]{rotation\+DegreesY}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_a653a15c9e2af6c11bbd9678cd54a716b}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_a653a15c9e2af6c11bbd9678cd54a716b}
+Overrides the event-\/sending to directly alert this implementation. 
+
+Reimplemented from \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a47563c59b6d436c05a1f70c16aeb30e9}{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}.
+
+\index{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}!try\+Start\+Game@{try\+Start\+Game}}
+\index{try\+Start\+Game@{try\+Start\+Game}!Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Master\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{try\+Start\+Game()}{tryStartGame()}}]{\setlength{\rightskip}{0pt plus 5cm}sealed override void Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl.\+try\+Start\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_master_tower_game_manager_impl_a43cb29dc14b7d9dcd90b5826c49a380d}{}\label{class_tower_v_r_1_1_master_tower_game_manager_impl_a43cb29dc14b7d9dcd90b5826c49a380d}
+Overrides the event-\/sending to directly alert this implementation. 
+
+Reimplemented from \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a04ad123026136abf9c009ff4c03937dc}{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/benjamin/\+Programmering/\+Android\+H\+M\+D/\+Tower\+V\+R/\+Assets/\+Scripts/\+Custom/\+Game/\+Tower/\+Manager/\+Impl/Master\+Tower\+Game\+Manager\+Impl.\+cs\end{DoxyCompactItemize}

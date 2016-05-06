@@ -1,0 +1,132 @@
+\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl}{}\section{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl Class Reference}
+\label{class_tower_v_r_1_1_tower_game_manager_impl}\index{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R.\+Tower\+Game\+Manager\+Impl}}
+Inheritance diagram for Tower\+V\+R.\+Tower\+Game\+Manager\+Impl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tower_v_r_1_1_tower_game_manager_impl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_ad4a2f3ff8f70fc26602d0c872d5cc36c}{notify\+Is\+Ready} ()
+\item 
+virtual void \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a04ad123026136abf9c009ff4c03937dc}{try\+Start\+Game} ()
+\item 
+virtual void \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a47563c59b6d436c05a1f70c16aeb30e9}{place\+Tower\+Piece} (float positionX, float positionZ, float rotation\+DegreesY)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tower_v_r_1_1_tower_game_manager}{Tower\+Game\+Manager} {\bfseries parent}\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a97ba625071b296f357f329db279531a0}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a97ba625071b296f357f329db279531a0}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Awake} ()\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a3351d08f215064960524516af7e39055}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a3351d08f215064960524516af7e39055}
+
+\item 
+virtual void {\bfseries On\+Destroy} ()\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a2aa9d1661b8b54be7309f6628a7e6128}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a2aa9d1661b8b54be7309f6628a7e6128}
+
+\item 
+virtual void \hyperlink{class_tower_v_r_1_1_tower_game_manager_impl_a325b500869bda665a71fef31783976be}{on\+Event} (byte event\+Code, object content, int sender\+ID)
+\item 
+virtual void {\bfseries handle\+Game\+State\+Changed\+Event} (int game\+State)\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a1e230366e77ebf760fa5a5aacb696585}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a1e230366e77ebf760fa5a5aacb696585}
+
+\item 
+virtual void {\bfseries handle\+Turn\+State\+Changed\+Event} (int turn\+State)\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a387b22b637c5e66e60c00ec0b3b9afa7}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a387b22b637c5e66e60c00ec0b3b9afa7}
+
+\item 
+virtual void {\bfseries handle\+Next\+Player\+Event} (int next\+Player\+ID)\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a94c2a0d3022dd3e23095280cc5c10de4}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a94c2a0d3022dd3e23095280cc5c10de4}
+
+\item 
+virtual void {\bfseries handle\+Score\+Changed\+Event} (int player\+ID, \hyperlink{struct_tower_v_r_1_1_score}{Score} score)\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_aaec8084da6c9e63d066a327a4ceef920}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_aaec8084da6c9e63d066a327a4ceef920}
+
+\item 
+virtual void {\bfseries handle\+Player\+Lost\+Event} (int player\+ID)\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a2229c85a77dd3e8487d9d127d6a084c4}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a2229c85a77dd3e8487d9d127d6a084c4}
+
+\item 
+virtual void {\bfseries handle\+Player\+Won\+Event} (int player\+ID)\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a048a25454703f18820253e52be426305}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a048a25454703f18820253e52be426305}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries Log\+Malformed\+Event\+Content} (string event\+Name, int sender\+ID)\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a30fb7cdde57c78be6c01ce6cd35412ae}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a30fb7cdde57c78be6c01ce6cd35412ae}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager}{I\+Tower\+Game\+Manager} that represents a remote instance.
+
+Do not use this class directly in the game logic. 
+
+\subsection{Member Function Documentation}
+\index{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}!notify\+Is\+Ready@{notify\+Is\+Ready}}
+\index{notify\+Is\+Ready@{notify\+Is\+Ready}!Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{notify\+Is\+Ready()}{notifyIsReady()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tower\+V\+R.\+Tower\+Game\+Manager\+Impl.\+notify\+Is\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_ad4a2f3ff8f70fc26602d0c872d5cc36c}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_ad4a2f3ff8f70fc26602d0c872d5cc36c}
+Sends an event to the master client implementation. 
+
+Implements \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager_a3091c61e8ef71c592a8baf1e611489c0}{Tower\+V\+R.\+I\+Tower\+Game\+Manager}.
+
+
+
+Reimplemented in \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a318dcef324a58787554cebe80c50ef64}{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}.
+
+\index{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}!on\+Event@{on\+Event}}
+\index{on\+Event@{on\+Event}!Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{on\+Event(byte event\+Code, object content, int sender\+I\+D)}{onEvent(byte eventCode, object content, int senderID)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tower\+V\+R.\+Tower\+Game\+Manager\+Impl.\+on\+Event (
+\begin{DoxyParamCaption}
+\item[{byte}]{event\+Code, }
+\item[{object}]{content, }
+\item[{int}]{sender\+ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a325b500869bda665a71fef31783976be}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a325b500869bda665a71fef31783976be}
+Receives events from the master client and alerts the observer delegates (i.\+e. Tower\+Game\+Behaviours). 
+
+Reimplemented in \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a6b6e868d063e5c3a43908c0f81349cfb}{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}.
+
+\index{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}!place\+Tower\+Piece@{place\+Tower\+Piece}}
+\index{place\+Tower\+Piece@{place\+Tower\+Piece}!Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{place\+Tower\+Piece(float position\+X, float position\+Z, float rotation\+Degrees\+Y)}{placeTowerPiece(float positionX, float positionZ, float rotationDegreesY)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tower\+V\+R.\+Tower\+Game\+Manager\+Impl.\+place\+Tower\+Piece (
+\begin{DoxyParamCaption}
+\item[{float}]{positionX, }
+\item[{float}]{positionZ, }
+\item[{float}]{rotation\+DegreesY}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a47563c59b6d436c05a1f70c16aeb30e9}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a47563c59b6d436c05a1f70c16aeb30e9}
+Sends an event to the master client implementation. 
+
+Implements \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager_aa800aded89d5de4af84321110f6eadd0}{Tower\+V\+R.\+I\+Tower\+Game\+Manager}.
+
+
+
+Reimplemented in \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a653a15c9e2af6c11bbd9678cd54a716b}{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}.
+
+\index{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}!try\+Start\+Game@{try\+Start\+Game}}
+\index{try\+Start\+Game@{try\+Start\+Game}!Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl@{Tower\+V\+R\+::\+Tower\+Game\+Manager\+Impl}}
+\subsubsection[{\texorpdfstring{try\+Start\+Game()}{tryStartGame()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Tower\+V\+R.\+Tower\+Game\+Manager\+Impl.\+try\+Start\+Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_tower_v_r_1_1_tower_game_manager_impl_a04ad123026136abf9c009ff4c03937dc}{}\label{class_tower_v_r_1_1_tower_game_manager_impl_a04ad123026136abf9c009ff4c03937dc}
+Sends an event to the master client implementation. 
+
+Implements \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager_a3b5866dd2b9659d65982f4ff651ee2c9}{Tower\+V\+R.\+I\+Tower\+Game\+Manager}.
+
+
+
+Reimplemented in \hyperlink{class_tower_v_r_1_1_master_tower_game_manager_impl_a43cb29dc14b7d9dcd90b5826c49a380d}{Tower\+V\+R.\+Master\+Tower\+Game\+Manager\+Impl}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/benjamin/\+Programmering/\+Android\+H\+M\+D/\+Tower\+V\+R/\+Assets/\+Scripts/\+Custom/\+Game/\+Tower/\+Manager/\+Impl/Tower\+Game\+Manager\+Impl.\+cs\end{DoxyCompactItemize}

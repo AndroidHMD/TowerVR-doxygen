@@ -1,0 +1,87 @@
+\hypertarget{class_tower_v_r_1_1_tower_game_manager}{}\section{Tower\+V\+R.\+Tower\+Game\+Manager Class Reference}
+\label{class_tower_v_r_1_1_tower_game_manager}\index{Tower\+V\+R.\+Tower\+Game\+Manager@{Tower\+V\+R.\+Tower\+Game\+Manager}}
+Inheritance diagram for Tower\+V\+R.\+Tower\+Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tower_v_r_1_1_tower_game_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tower_v_r_1_1_tower_game_manager_a7ea173c143c836423cc25e8f0eed970d}{notify\+Is\+Ready} ()\hypertarget{class_tower_v_r_1_1_tower_game_manager_a7ea173c143c836423cc25e8f0eed970d}{}\label{class_tower_v_r_1_1_tower_game_manager_a7ea173c143c836423cc25e8f0eed970d}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager}{I\+Tower\+Game\+Manager}. \end{DoxyCompactList}\item 
+void \hyperlink{class_tower_v_r_1_1_tower_game_manager_a489f27c61ec3d5c29ac56fea0a024cf6}{try\+Start\+Game} ()\hypertarget{class_tower_v_r_1_1_tower_game_manager_a489f27c61ec3d5c29ac56fea0a024cf6}{}\label{class_tower_v_r_1_1_tower_game_manager_a489f27c61ec3d5c29ac56fea0a024cf6}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager}{I\+Tower\+Game\+Manager}. \end{DoxyCompactList}\item 
+void \hyperlink{class_tower_v_r_1_1_tower_game_manager_aaa476cfb148a19c6579c38823dd37fd3}{place\+Tower\+Piece} (float positionX, float positionZ, float rotation\+DegreesY)\hypertarget{class_tower_v_r_1_1_tower_game_manager_aaa476cfb148a19c6579c38823dd37fd3}{}\label{class_tower_v_r_1_1_tower_game_manager_aaa476cfb148a19c6579c38823dd37fd3}
+
+\begin{DoxyCompactList}\small\item\em See \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager}{I\+Tower\+Game\+Manager}. \end{DoxyCompactList}\item 
+delegate void \hyperlink{class_tower_v_r_1_1_tower_game_manager_a4bfd43a7fbaab6c26aa918ff220f11f8}{Game\+State\+Changed\+Handler} (int game\+State)
+\item 
+delegate void {\bfseries Turn\+State\+Changed\+Handler} (int turn\+State)\hypertarget{class_tower_v_r_1_1_tower_game_manager_aa05ec13ba870bbe24fe436ffe251889e}{}\label{class_tower_v_r_1_1_tower_game_manager_aa05ec13ba870bbe24fe436ffe251889e}
+
+\item 
+delegate void {\bfseries Player\+Lost\+Handler} (int losing\+Player\+ID)\hypertarget{class_tower_v_r_1_1_tower_game_manager_a9caa83a7218ba6076cb2b486373bb8dc}{}\label{class_tower_v_r_1_1_tower_game_manager_a9caa83a7218ba6076cb2b486373bb8dc}
+
+\item 
+delegate void {\bfseries Player\+Won\+Handler} (int winning\+Player\+ID)\hypertarget{class_tower_v_r_1_1_tower_game_manager_a686d2c9d0920eade95dc5a3156da132c}{}\label{class_tower_v_r_1_1_tower_game_manager_a686d2c9d0920eade95dc5a3156da132c}
+
+\item 
+delegate void {\bfseries Next\+Player\+Turn\+Handler} (int next\+Player\+ID)\hypertarget{class_tower_v_r_1_1_tower_game_manager_a5cc6c300c296925e5e6b33a16e0553ca}{}\label{class_tower_v_r_1_1_tower_game_manager_a5cc6c300c296925e5e6b33a16e0553ca}
+
+\item 
+delegate void {\bfseries Score\+Updated\+Handler} (int player\+ID, \hyperlink{struct_tower_v_r_1_1_score}{Score} score)\hypertarget{class_tower_v_r_1_1_tower_game_manager_ab5e73141e867a0d3505f87cafe04f0f8}{}\label{class_tower_v_r_1_1_tower_game_manager_ab5e73141e867a0d3505f87cafe04f0f8}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries T\+E\+S\+T\+\_\+force\+Master\+Implementation} = false\hypertarget{class_tower_v_r_1_1_tower_game_manager_a8e6cdf3d57bac1f8fdcfe01094180d07}{}\label{class_tower_v_r_1_1_tower_game_manager_a8e6cdf3d57bac1f8fdcfe01094180d07}
+
+\item 
+Hash\+Set$<$ \hyperlink{class_tower_v_r_1_1_tower_game_manager_a4bfd43a7fbaab6c26aa918ff220f11f8}{Game\+State\+Changed\+Handler} $>$ {\bfseries game\+State\+Changed\+Handlers} = new Hash\+Set$<$\hyperlink{class_tower_v_r_1_1_tower_game_manager_a4bfd43a7fbaab6c26aa918ff220f11f8}{Game\+State\+Changed\+Handler}$>$()\hypertarget{class_tower_v_r_1_1_tower_game_manager_ab98615edfe6e6cc3f8a021104ad83c30}{}\label{class_tower_v_r_1_1_tower_game_manager_ab98615edfe6e6cc3f8a021104ad83c30}
+
+\item 
+Hash\+Set$<$ Turn\+State\+Changed\+Handler $>$ {\bfseries turn\+State\+Changed\+Handlers} = new Hash\+Set$<$Turn\+State\+Changed\+Handler$>$()\hypertarget{class_tower_v_r_1_1_tower_game_manager_aa659bd7720f3cfa335b291f30b7391bb}{}\label{class_tower_v_r_1_1_tower_game_manager_aa659bd7720f3cfa335b291f30b7391bb}
+
+\item 
+Hash\+Set$<$ Player\+Lost\+Handler $>$ {\bfseries player\+Lost\+Handlers} = new Hash\+Set$<$Player\+Lost\+Handler$>$()\hypertarget{class_tower_v_r_1_1_tower_game_manager_a2bc2fd34f8a424f9ebdbea79b282f6ee}{}\label{class_tower_v_r_1_1_tower_game_manager_a2bc2fd34f8a424f9ebdbea79b282f6ee}
+
+\item 
+Hash\+Set$<$ Player\+Won\+Handler $>$ {\bfseries player\+Won\+Handlers} = new Hash\+Set$<$Player\+Won\+Handler$>$()\hypertarget{class_tower_v_r_1_1_tower_game_manager_ae676d69dff124b0d9c2e940b75588f8d}{}\label{class_tower_v_r_1_1_tower_game_manager_ae676d69dff124b0d9c2e940b75588f8d}
+
+\item 
+Hash\+Set$<$ Next\+Player\+Turn\+Handler $>$ {\bfseries next\+Player\+Turn\+Handlers} = new Hash\+Set$<$Next\+Player\+Turn\+Handler$>$()\hypertarget{class_tower_v_r_1_1_tower_game_manager_a129dec36b93852d13853309a2afad23d}{}\label{class_tower_v_r_1_1_tower_game_manager_a129dec36b93852d13853309a2afad23d}
+
+\item 
+Hash\+Set$<$ Score\+Updated\+Handler $>$ {\bfseries score\+Updated\+Handlers} = new Hash\+Set$<$Score\+Updated\+Handler$>$()\hypertarget{class_tower_v_r_1_1_tower_game_manager_a8acf4a1219084e55e0c2a92eddf5cdf0}{}\label{class_tower_v_r_1_1_tower_game_manager_a8acf4a1219084e55e0c2a92eddf5cdf0}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of the \hyperlink{interface_tower_v_r_1_1_i_tower_game_manager}{I\+Tower\+Game\+Manager} interface.
+
+Attach this component to E\+X\+A\+C\+T\+LY O\+NE gameobject in the tower game scene. 
+
+\subsection{Member Function Documentation}
+\index{Tower\+V\+R\+::\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+Tower\+Game\+Manager}!Game\+State\+Changed\+Handler@{Game\+State\+Changed\+Handler}}
+\index{Game\+State\+Changed\+Handler@{Game\+State\+Changed\+Handler}!Tower\+V\+R\+::\+Tower\+Game\+Manager@{Tower\+V\+R\+::\+Tower\+Game\+Manager}}
+\subsubsection[{\texorpdfstring{Game\+State\+Changed\+Handler(int game\+State)}{GameStateChangedHandler(int gameState)}}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Tower\+V\+R.\+Tower\+Game\+Manager.\+Game\+State\+Changed\+Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{game\+State}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tower_v_r_1_1_tower_game_manager_a4bfd43a7fbaab6c26aa918ff220f11f8}{}\label{class_tower_v_r_1_1_tower_game_manager_a4bfd43a7fbaab6c26aa918ff220f11f8}
+Subscribe to these delegates to receive game logic updates\+:
+\begin{DoxyEnumerate}
+\item Create a method with the corresponding \textquotesingle{}{\itshape Handler}\textquotesingle{} signature.
+\item Call \textquotesingle{}$\ast$\+Handlers\textquotesingle{}.Add(\mbox{[}your method here\mbox{]})
+\item Win End. Call \textquotesingle{}$\ast$\+Handlers\textquotesingle{}.Remove(\mbox{[}your method here\mbox{]}) in the script\textquotesingle{}s On\+Destroy 
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/benjamin/\+Programmering/\+Android\+H\+M\+D/\+Tower\+V\+R/\+Assets/\+Scripts/\+Custom/\+Game/\+Tower/\+Manager/Tower\+Game\+Manager.\+cs\end{DoxyCompactItemize}

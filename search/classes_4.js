@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['joinserver',['JoinServer',['../class_join_server.html',1,'']]]
+  ['handleendgame',['HandleEndGame',['../class_tower_v_r_1_1_handle_end_game.html',1,'TowerVR']]],
+  ['handlestartgame',['HandleStartGame',['../class_tower_v_r_1_1_handle_start_game.html',1,'TowerVR']]]
 ];

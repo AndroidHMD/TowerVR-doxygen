@@ -1,6 +1,6 @@
 var class_spawn_selected_level =
 [
-    [ "LevelComponents", "class_spawn_selected_level.html#a604f58d67bb353137f526689fecd1738", null ],
-    [ "Material1", "class_spawn_selected_level.html#a366848fc78a8c064b11ca751d3d6025a", null ],
-    [ "Skybox", "class_spawn_selected_level.html#a13d055e319c08c9e52f37d8b810889f0", null ]
+    [ "levelObjects", "class_spawn_selected_level.html#a984fb26d0da121ff8a322612011f2b2c", null ],
+    [ "Skybox", "class_spawn_selected_level.html#a13d055e319c08c9e52f37d8b810889f0", null ],
+    [ "towerPieceMaterials", "class_spawn_selected_level.html#a1bb9c8498d1c3d9d84271b0626b81b28", null ]
 ];

@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['notifyisready',['notifyIsReady',['../class_tower_v_r_1_1_master_tower_game_manager_impl.html#a318dcef324a58787554cebe80c50ef64',1,'TowerVR.MasterTowerGameManagerImpl.notifyIsReady()'],['../class_tower_v_r_1_1_tower_game_manager_impl.html#ad4a2f3ff8f70fc26602d0c872d5cc36c',1,'TowerVR.TowerGameManagerImpl.notifyIsReady()'],['../interface_tower_v_r_1_1_i_tower_game_manager.html#a3091c61e8ef71c592a8baf1e611489c0',1,'TowerVR.ITowerGameManager.notifyIsReady()'],['../class_tower_v_r_1_1_tower_game_manager.html#a7ea173c143c836423cc25e8f0eed970d',1,'TowerVR.TowerGameManager.notifyIsReady()']]]
+  ['gamestatechangedevent',['GameStateChangedEvent',['../class_tower_v_r_1_1_game_state_changed_event.html#a6f9283ad204a22cb16636b86503ed856',1,'TowerVR::GameStateChangedEvent']]],
+  ['gamestatechangedhandler',['GameStateChangedHandler',['../class_tower_v_r_1_1_tower_game_manager.html#a4bfd43a7fbaab6c26aa918ff220f11f8',1,'TowerVR::TowerGameManager']]],
+  ['generatename',['GenerateName',['../class_player_name_generator.html#a013635877970c96b8ab5b81bda333dce',1,'PlayerNameGenerator']]],
+  ['gethashcode',['GetHashCode',['../class_tuple.html#a984b1b0773a631b9efc8582ef6c6dbe8',1,'Tuple']]],
+  ['getscore',['GetScore',['../struct_tower_v_r_1_1_score.html#af6094076da2c9cbdab969bf879e4dfcd',1,'TowerVR::Score']]],
+  ['getuniquephotonviewid',['GetUniquePhotonViewID',['../class_networked_behaviour.html#a59d7978c054fa5226c43a82566d35877',1,'NetworkedBehaviour']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handleplayerreadyevent',['handlePlayerReadyEvent',['../class_tower_v_r_1_1_master_tower_game_manager_impl.html#a308a6d258b02fd2c9ee1f9e8d0445dd4',1,'TowerVR::MasterTowerGameManagerImpl']]]
+  ['equals',['Equals',['../class_tuple.html#a652485a7556e21cbcbe25982a3e88860',1,'Tuple.Equals(object o)'],['../class_tuple.html#a38298427c41b810839172e4afd4b4f88',1,'Tuple.Equals(Tuple&lt; T1, T2 &gt; other)']]]
 ];

@@ -32,6 +32,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TowerVR
+   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -48,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Packages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -124,12 +126,12 @@ Inheritance diagram for TowerVR.TurnStateChangedEvent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a52ab33a4e06c8e369f475917625e1ad1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52ab33a4e06c8e369f475917625e1ad1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TurnStateChangedEvent</b> (int validTurnState)</td></tr>
+<tr class="memitem:a52ab33a4e06c8e369f475917625e1ad1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tower_v_r_1_1_turn_state_changed_event.html#a52ab33a4e06c8e369f475917625e1ad1">TurnStateChangedEvent</a> (int validTurnState)</td></tr>
 <tr class="separator:a52ab33a4e06c8e369f475917625e1ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_photon_network_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_photon_network_event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_photon_network_event.html">PhotonNetworkEvent</a></td></tr>
-<tr class="memitem:acbfe71760048a6edf950f710167b56ca inherit pub_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbfe71760048a6edf950f710167b56ca"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>trySend</b> ()</td></tr>
+<tr class="memitem:a6e2b8297deb4dfe3a6d8469f1e5334f7 inherit pub_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#a6e2b8297deb4dfe3a6d8469f1e5334f7">PhotonNetworkEvent</a> ()</td></tr>
+<tr class="separator:a6e2b8297deb4dfe3a6d8469f1e5334f7 inherit pub_methods_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbfe71760048a6edf950f710167b56ca inherit pub_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#acbfe71760048a6edf950f710167b56ca">trySend</a> ()</td></tr>
 <tr class="separator:acbfe71760048a6edf950f710167b56ca inherit pub_methods_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -140,31 +142,42 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_photon_network_event"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_photon_network_event')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_photon_network_event.html">PhotonNetworkEvent</a></td></tr>
-<tr class="memitem:a7344442ecce18c3a78594f9a298a2572 inherit pro_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7344442ecce18c3a78594f9a298a2572"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setReceivers</b> (ReceiverGroup receiverGroup)</td></tr>
+<tr class="memitem:a7344442ecce18c3a78594f9a298a2572 inherit pro_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#a7344442ecce18c3a78594f9a298a2572">setReceivers</a> (ReceiverGroup receiverGroup)</td></tr>
 <tr class="separator:a7344442ecce18c3a78594f9a298a2572 inherit pro_methods_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a070870e1683624c335c5a9ecb9cb2b29 inherit pro_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a070870e1683624c335c5a9ecb9cb2b29"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setReceivers</b> (params int[] playerIDs)</td></tr>
+<tr class="memitem:a070870e1683624c335c5a9ecb9cb2b29 inherit pro_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#a070870e1683624c335c5a9ecb9cb2b29">setReceivers</a> (params int[] playerIDs)</td></tr>
 <tr class="separator:a070870e1683624c335c5a9ecb9cb2b29 inherit pro_methods_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82a5487738983085c9e8ac4116474b43 inherit pro_methods_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#a82a5487738983085c9e8ac4116474b43">contentIsValid</a> ()</td></tr>
 <tr class="separator:a82a5487738983085c9e8ac4116474b43 inherit pro_methods_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_photon_network_event"><td colspan="2" onclick="javascript:toggleInherit('properties_class_photon_network_event')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_photon_network_event.html">PhotonNetworkEvent</a></td></tr>
-<tr class="memitem:a93db8417c2b97d96ac6541ad2eda3743 inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93db8417c2b97d96ac6541ad2eda3743"></a>
-byte&#160;</td><td class="memItemRight" valign="bottom"><b>eventCode</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a93db8417c2b97d96ac6541ad2eda3743 inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#a93db8417c2b97d96ac6541ad2eda3743">eventCode</a><code> [get, set]</code></td></tr>
 <tr class="separator:a93db8417c2b97d96ac6541ad2eda3743 inherit properties_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af40128239b2f9a8fb905f125ddbf5e96 inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40128239b2f9a8fb905f125ddbf5e96"></a>
-object&#160;</td><td class="memItemRight" valign="bottom"><b>content</b><code> [get, set]</code></td></tr>
+<tr class="memitem:af40128239b2f9a8fb905f125ddbf5e96 inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#af40128239b2f9a8fb905f125ddbf5e96">content</a><code> [get, set]</code></td></tr>
 <tr class="separator:af40128239b2f9a8fb905f125ddbf5e96 inherit properties_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03103d069e24a349bf4fc74a493bbeda inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03103d069e24a349bf4fc74a493bbeda"></a>
-RaiseEventOptions&#160;</td><td class="memItemRight" valign="bottom"><b>eventOptions</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a03103d069e24a349bf4fc74a493bbeda inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">RaiseEventOptions&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#a03103d069e24a349bf4fc74a493bbeda">eventOptions</a><code> [get, set]</code></td></tr>
 <tr class="separator:a03103d069e24a349bf4fc74a493bbeda inherit properties_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b1e1ac39a121ed6e202eeaaa5e7df1 inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26b1e1ac39a121ed6e202eeaaa5e7df1"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>trySendError</b><code> [get, protected set]</code></td></tr>
+<tr class="memitem:a26b1e1ac39a121ed6e202eeaaa5e7df1 inherit properties_class_photon_network_event"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_photon_network_event.html#a26b1e1ac39a121ed6e202eeaaa5e7df1">trySendError</a><code> [get, protected set]</code></td></tr>
 <tr class="separator:a26b1e1ac39a121ed6e202eeaaa5e7df1 inherit properties_class_photon_network_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An event raised when the master client has changed the current turn's state. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a52ab33a4e06c8e369f475917625e1ad1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TowerVR.TurnStateChangedEvent.TurnStateChangedEvent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>validTurnState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="af2a87f4c766ea138684caf2a79efeed7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +214,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>trySendError</b><co
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/Game/Network/Events/TurnStateChangedEvent.cs</li>
+<li>/Users/benjamin/Programmering/AndroidHMD/TowerVR/Assets/Scripts/Custom/Game/Network/Events/<a class="el" href="_turn_state_changed_event_8cs.html">TurnStateChangedEvent.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
